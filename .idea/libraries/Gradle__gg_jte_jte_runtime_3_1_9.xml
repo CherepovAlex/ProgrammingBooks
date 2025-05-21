@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: gg.jte:jte-runtime:3.1.9" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="gg.jte" artifactId="jte-runtime" version="3.1.9" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/gg.jte/jte-runtime/3.1.9/4bc56b3319a9134ecde044a560f822bbbbdc0e43/jte-runtime-3.1.9.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/gg.jte/jte-runtime/3.1.9/d13de4bfdbbf40a522291540e0a4ac27561a7dc6/jte-runtime-3.1.9-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
