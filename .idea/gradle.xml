@@ -22,6 +22,26 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul4/08-Java-Web-Technology/16-Model-View-Controller-dz" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul4/08-Java-Web-Technology/16-Model-View-Controller-dz" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul4/08-Java-Web-Technology/17-Middlewares-dz" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul4/08-Java-Web-Technology/17-Middlewares-dz" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul4/08-Java-Web-Technology/17-Middlewares-p1" />
         <option name="gradleJvm" value="#JAVA_HOME" />
         <option name="modules">
@@ -47,6 +67,16 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/Hexlet/Modul4/08-Java-Web-Technology/17-Middlewares-p3" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Java-Coding-Problems/Glava1/P01_CountDuplicateCharacters" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Java-Coding-Problems/Glava1/P01_CountDuplicateCharacters" />
           </set>
         </option>
       </GradleProjectSettings>

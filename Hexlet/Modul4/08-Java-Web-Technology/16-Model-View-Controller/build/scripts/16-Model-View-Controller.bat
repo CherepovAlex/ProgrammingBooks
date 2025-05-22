@@ -72,7 +72,7 @@ set CLASSPATH=%APP_HOME%\lib\16-Model-View-Controller-1.0-SNAPSHOT.jar;%APP_HOME
 
 
 @rem Execute 16-Model-View-Controller
-"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %16_MODEL_VIEW_CONTROLLER_OPTS%  -classpath "%CLASSPATH%" org.example14.App %*
+"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %16_MODEL_VIEW_CONTROLLER_OPTS%  -classpath "%CLASSPATH%" io.hexlet.App %*
 
 :end
 @rem End local scope for the variables with windows NT shell
