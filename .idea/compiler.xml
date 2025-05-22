@@ -7,7 +7,7 @@
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.28/a2ff5da8bcd8b1b26f36b806ced63213362c6dcc/lombok-1.18.28.jar" />
         </processorPath>
-        <module name="16-Model-View-Controller.main" />
+        <module name="17-Middlewares-p3.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -32,9 +32,12 @@
       <module name="08-Java-Web-Technology" target="17" />
       <module name="08-Java-Web-Technology.main" target="17" />
       <module name="08-Java-Web-Technology.test" target="17" />
-      <module name="16-Model-View-Controller" target="17" />
-      <module name="16-Model-View-Controller.main" target="17" />
-      <module name="16-Model-View-Controller.test" target="17" />
+      <module name="17-Middleware-p1" target="17" />
+      <module name="17-Middleware.main" target="17" />
+      <module name="17-Middleware.test" target="17" />
+      <module name="jte" target="17" />
+      <module name="jte.main" target="17" />
+      <module name="jte.test" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/16-Model-View-Controller.iml" filepath="$PROJECT_DIR$/.idea/modules/16-Model-View-Controller.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/01-Obrabotchiki-zaprosov.main.iml" filepath="$PROJECT_DIR$/.idea/modules/01-Obrabotchiki-zaprosov.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/16-Model-View-Controller.main.iml" filepath="$PROJECT_DIR$/.idea/modules/16-Model-View-Controller.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/16-Model-View-Controller.test.iml" filepath="$PROJECT_DIR$/.idea/modules/16-Model-View-Controller.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/17-Middlewares-p1.main.iml" filepath="$PROJECT_DIR$/.idea/modules/17-Middlewares-p1.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/ProgrammingBooks.iml" filepath="$PROJECT_DIR$/ProgrammingBooks.iml" />
     </modules>
   </component>
