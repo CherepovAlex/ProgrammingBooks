@@ -1,0 +1,54 @@
+В этом задании вам предстоит разработать приложение для регистрации пользователя с надежной обработкой возможных ошибок.
+Для этого нужно будет создать собственную иерархию исключений.
+
+src/main/java/io/hexlet/exception/RegistrationException.java
+Опишите базовый класс исключений для нашего приложения RegistrationException, который будет наследовать
+от стандартного класса Exception. В конструкторе вызовите конструктор родительского класса, передав ему сообщение об ошибке.
+
+src/main/java/io/hexlet/exception/InvalidEmailException.java; PasswordsNotMatchException.java; UserExistsException.java
+Опишите подклассы исключений, которые будут наследоваться от базового класса исключений нашего приложения
+RegistrationException. Каждый подкласс должен вызывать конструктор родительского класса с информативным сообщением об ошибке
+
+src/main/java/io/hexlet/App.java
+В классе App реализуйте публичный статический метод registerUser(), который будет имитировать процесс регистрации
+пользователя. Метод принимает на вход 2 параметра:
+
+Список List<User> пользователей. Каждый пользователь представлен объектом класса User
+Данные для регистрации нового пользователя в виде Map<String, String> с полями email, password и confirmation
+Перед регистрацией метод должен выполнить валидацию введенных данных. Если все в порядке, то метод добавляет
+нового пользователя (новый объект класса User) с такими данными в список пользователей.
+
+В противном случае выбрасывает соответствующее исключение:
+-Валидация email. Если еmail невалидный, выбрасывается ошибка InvalidEmailException
+-Проверка, что пароли совпадают. Если пароли не совпадают, то выбрасывается исключение PasswordsNotMatchException
+-Проверка на существование пользователя с таким email. Если в списке пользователей пользователь с таким email
+уже существует, то выбрасывается исключение UserExistsException
+Пример, как мог бы использоваться созданный метод регистрации:
+
+// Создаем список пользователей
+users = new ArrayList<User>();
+var data = List.of(
+    new User("gconibeer0@whitehouse.gov", "zJ4C"),
+    new User("fmellsop1@examiner.com", "kG5T125"),
+    new User("cbafford2@cafepress.com", "gE3pG4Y")
+);
+users.addAll(data);
+
+// Получаем данные для регистрации нового пользователя
+var registrationData = Map.of(
+    "email", "gconibeer0@whitehouse.gov",
+    "password", "qwerty",
+    "confirmation", "qwerty"
+);
+
+// Регистрируем
+try {
+    App.registerUser(users, registrationData);
+} catch (RegistrationError e) {
+    var message = "Произошла ошибка при регистрации: " + e.getMessage();
+    System.out.println(message);
+}
+
+//=> Произошла ошибка при регистрации: Пользователь с таким email уже существует
+Подсказки
+Для валидации email можете использовать метод EmailValidator.isValid() из пакета io.hexlet.util в упражнении
