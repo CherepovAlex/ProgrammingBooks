@@ -3,9 +3,10 @@ package io.hexlet.controller;
 import io.hexlet.dto.courses.BuildCoursePage;
 import io.hexlet.dto.courses.CoursePage;
 import io.hexlet.dto.courses.CoursesPage;
-import io.hexlet.model.Course;
 import io.hexlet.repository.CourseRepository;
 import io.hexlet.util.NamedRoutes;
+import io.hexlet.model.Course;
+
 import io.javalin.http.Context;
 import io.javalin.validation.ValidationException;
 

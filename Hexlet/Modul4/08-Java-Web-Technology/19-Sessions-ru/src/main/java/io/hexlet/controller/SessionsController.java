@@ -19,6 +19,8 @@ public class SessionsController {
     }
 
     public static void build(Context ctx) {
+        var error = ctx.sessionAttribute("error");
+        var name = ctx.sessionAttribute("name");
         var page = new LoginPage("", "");
         ctx.render("build.jte", model("page", page));
     }

@@ -1,32 +1,26 @@
 package io.hexlet;
 
 import io.hexlet.controller.SessionsController;
-import io.hexlet.dto.MainPage;
+import io.hexlet.util.NamedRoutes;
 import io.javalin.Javalin;
 import io.javalin.rendering.template.JavalinJte;
+import io.hexlet.controller.UsersController;
 
-import static io.javalin.rendering.template.TemplateUtil.model;
-
-public class HelloWorld {
-
+public class App {
     public static Javalin getApp() {
         var app = Javalin.create(config -> {
             config.bundledPlugins.enableDevLogging();
             config.fileRenderer(new JavalinJte());
         });
-
-        app.get("/", ctx -> {
-
-           var page = new MainPage(ctx.sessionAttribute("currentUser"));
-           ctx.render("index.jte", model("page", page));
-        });
-
+        app.get(NamedRoutes.homePath(), SessionsController::index);
         app.get(NamedRoutes.buildSessionPath(), SessionsController::build);
-
         app.post(NamedRoutes.sessionsPath(), SessionsController::create);
+        app.post(NamedRoutes.logoutPath(), SessionsController::destroy);
 
-        app.delete(NamedRoutes.sessionsPath(), SessionsController::destroy);
-
+        app.get(NamedRoutes.usersPath(), UsersController::index);
+        app.get(NamedRoutes.buildUserPath(), UsersController::build);
+        app.post(NamedRoutes.usersPath(), UsersController::create);
+        app.get(NamedRoutes.userPath("{id}"), UsersController::show);
         return app;
     }
 
