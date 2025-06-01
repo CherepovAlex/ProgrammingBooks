@@ -18,7 +18,7 @@ import static io.javalin.rendering.template.TemplateUtil.model;
 
 public class UsersController {
     // Отображение списка пользователей
-    public static void index(Context ctx) {
+    public static void index(Context ctx) throws SQLException {
         String flash = ctx.consumeSessionAttribute("flash");
         String flashType = ctx.consumeSessionAttribute("flashType");
         String currentUser = ctx.sessionAttribute("currentUser");
@@ -29,14 +29,14 @@ public class UsersController {
     }
 
     // Форма создания нового пользователя
-    public static void build(Context ctx) throws Exception {
+    public static void build(Context ctx) throws SQLException {
         var page = new BuildUserPage();
         ctx.render("users/build.jte", model("page", page));
     }
 
     // Создание пользователя (обработка формы)
-    public static void create(Context ctx) throws Exception {
-        var name = ctx.formParam("firstName");
+    public static void create(Context ctx) throws SQLException {
+        var name = ctx.formParam("name");
         var lastName = ctx.formParam("lastName");
         var email = ctx.formParam("email");
         var password = ctx.formParam("password");
@@ -51,7 +51,7 @@ public class UsersController {
         }
 
         if (!password.equals(passwordConfirmation)) {
-            ctx.sessionAttribute("flash", "Passqords doesn't match");
+            ctx.sessionAttribute("flash", "Passwords doesn't match");
             ctx.sessionAttribute("flashType", "danger");
             ctx.redirect(NamedRoutes.buildUserPath());
             return;
@@ -85,4 +85,17 @@ public class UsersController {
         var page = new UserPage(user);
         ctx.render("users/show.jte", model("page", page));
     }
+
+    public static void delete(Context ctx) throws SQLException {
+        var id = ctx.pathParamAsClass("id", Long.class).get();
+
+        if (!UsersRepository.delete(id)) {
+            throw new NotFoundResponse("User not found");
+        }
+
+        ctx.sessionAttribute("flash", "User has been deleted successfully!");
+        ctx.sessionAttribute("flashType", "success");
+        ctx.redirect(NamedRoutes.usersPath());
+    }
+
 }

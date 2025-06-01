@@ -1,7 +1,6 @@
 package io.hexlet.repository;
 
 import io.hexlet.model.Car;
-import org.checkerframework.checker.units.qual.C;
 
 import java.sql.SQLException;
 import java.sql.Statement;
