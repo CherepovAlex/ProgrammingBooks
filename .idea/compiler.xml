@@ -5,9 +5,8 @@
       <profile name="Gradle Imported" enabled="true">
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.28/a2ff5da8bcd8b1b26f36b806ced63213362c6dcc/lombok-1.18.28.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.36/5a30490a6e14977d97d9c73c924c1f1b5311ea95/lombok-1.18.36.jar" />
         </processorPath>
-        <module name="21-Work-with-JDBC-dz.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -39,6 +38,12 @@
       <module name="17-Middleware-p1" target="17" />
       <module name="17-Middleware.main" target="17" />
       <module name="17-Middleware.test" target="17" />
+      <module name="23-Servlets-p1" target="17" />
+      <module name="23-Servlets-p1.main" target="17" />
+      <module name="23-Servlets-p1.test" target="17" />
+      <module name="io.hexlet.23-java-servlet-gradle" target="17" />
+      <module name="io.hexlet.23-java-servlet-gradle.main" target="17" />
+      <module name="io.hexlet.23-java-servlet-gradle.test" target="17" />
       <module name="jte" target="17" />
       <module name="jte.main" target="17" />
       <module name="jte.test" target="17" />

@@ -94,6 +94,26 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul4/08-Java-Web-Technology/08-layout-dz" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul4/08-Java-Web-Technology/08-layout-dz" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul4/08-Java-Web-Technology/08-layout-ru" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul4/08-Java-Web-Technology/08-layout-ru" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul4/08-Java-Web-Technology/16-Model-View-Controller" />
         <option name="gradleJvm" value="#JAVA_HOME" />
         <option name="modules">
@@ -258,6 +278,16 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/Hexlet/Modul4/08-Java-Web-Technology/21-Work-with-JDBC-users" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul4/08-Java-Web-Technology/23-java-servlet-gradle" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul4/08-Java-Web-Technology/23-java-servlet-gradle" />
           </set>
         </option>
       </GradleProjectSettings>
