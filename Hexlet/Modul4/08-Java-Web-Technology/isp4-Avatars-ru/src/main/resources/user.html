@@ -1,0 +1,31 @@
+<!-- В испытании по техническим причинам используем шаблонизатор thymeleaf -->
+<!-- Но с точки зрения работы в контроллере ничего не меняется -->
+
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+    <!-- Подключение Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="text-center">User Details</h1>
+    <div class="mt-4">
+        <img th:src="@{/images/{avatarUrl}(avatarUrl=${page.user.avatar.imageUrl})}"
+             alt="User Avatar" class="img-fluid rounded-circle" width="150" height="150">
+    </div>
+    <div class="mt-4">
+        <h3 th:text="${page.user.name}">User Name</h3>
+        <p><strong>Email:</strong> <span th:text="${page.user.email}">user@example.com</span></p>
+    </div>
+    <div class="text-center">
+        <a href="/users" class="btn btn-primary">Back to User List</a>
+    </div>
+</div>
+
+</body>
+</html>

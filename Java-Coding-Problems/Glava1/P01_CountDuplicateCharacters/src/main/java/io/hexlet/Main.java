@@ -19,7 +19,6 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("Input text: \n" + TEXT + "\n");
-
         System.out.println("\n\nASCII or 16 bits Unicode characters (less than 65,535 (0xFFFF)) examples: \n");
 
         System.out.println("HashMap based solution:");
@@ -32,9 +31,9 @@ public class Main {
         System.out.println();
 
         System.out.println("Java 8, functional-style solution:");
-        long startTimeV2 = System.nanoTime();
+        long startTimeV2 = System.nanoTime(); // Замер времени начала выполнения.
         Map<Character, Long> duplicatesV2 = Strings.countDuplicateCharactersV2(TEXT);
-        displayExecutionTime(System.nanoTime() - startTimeV2);
+        displayExecutionTime(System.nanoTime() - startTimeV2); // Вывод времени выполнения
         System.out.println(Arrays.toString(duplicatesV2.entrySet().toArray()));
         // or: duplicatesV2.forEach( (k, v) -> System.out.print(k + "="+ v + ", "));
         System.out.println("\n--------------------------------------\n");

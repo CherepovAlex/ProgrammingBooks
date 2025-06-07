@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Guess the Number Game</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="text-center">Welcome to the Guess the Number Game!</h1>
+    <p class="text-center">Game rules: I'm thinking of a random number from 1 to 100, and you have to guess it in a few attempts.</p>
+    <form th:action="@{/start}" th:method="post" class="form-inline justify-content-center">
+        <label for="difficulty" class="mr-2">Choose your difficulty level:</label>
+        <select id="difficulty" name="attempts" class="form-control">
+            <option value="5">Hard (5 attempts)</option>
+            <option selected value="8">Medium (8 attempts)</option>
+            <option value="12">Easy (12 attempts)</option>
+        </select>
+        <button type="submit" class="btn btn-primary ml-2">Start the game</button>
+    </form>
+</div>
+</body>
+</html>

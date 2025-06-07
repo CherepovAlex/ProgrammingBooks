@@ -1,0 +1,53 @@
+<!-- В испытании по техническим причинам используем шаблонизатор thymeleaf -->
+<!-- Но с точки зрения работы в контроллере ничего не меняется -->
+
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+  <title>Movies</title>
+</head>
+<body>
+<section layout:fragment="content">
+  <form action="#" method="get">
+    <div>
+      <label for="director">Director:</label>
+      <input type="text" id="director" name="director" th:value="${param.director}">
+    </div>
+    <div>
+      <label for="genre">Genre:</label>
+      <input type="text" id="genre" name="genre" th:value="${param.genre}">
+    </div>
+    <div>
+      <label for="rating">Rating:</label>
+      <input type="number" id="rating" name="rating" min="0" max="10" step="0.1" th:value="${param.rating}">
+    </div>
+    <div>
+      <button type="submit">Search</button>
+    </div>
+  </form>
+
+  <table class="table">
+    <thead>
+      <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Director</th>
+          <th>Genre</th>
+          <th>Rating</th>
+          <th>Year</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr th:each="movie : ${page.movies}">
+            <td th:text="${movie.id}">ID</td>
+            <td th:text="${movie.title}">Title</td>
+            <td th:text="${movie.director}">Director</td>
+            <td th:text="${movie.genre}">Genre</td>
+            <td th:text="${movie.rating}">Rating</td>
+            <td th:text="${movie.year}">Year</td>
+        </tr>
+    </tbody>
+  </table>
+</section>
+</body>
+</html>

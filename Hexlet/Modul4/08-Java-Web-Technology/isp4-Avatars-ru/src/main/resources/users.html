@@ -1,0 +1,33 @@
+<!-- В испытании по техническим причинам используем шаблонизатор thymeleaf -->
+<!-- Но с точки зрения работы в контроллере ничего не меняется -->
+
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Users</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="text-center">User List</h1>
+    <table class="table table-striped table-bordered">
+        <thead class="thead-dark">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="user : ${page.users}">
+            <td th:text="${user.id}">ID</td>
+            <td>
+                <a th:href="@{/users/{id}(id=${user.id})}" th:text="${user.name}">Name</a>
+            </td>
+            <td th:text="${user.email}">Email</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
