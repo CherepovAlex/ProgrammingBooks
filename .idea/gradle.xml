@@ -471,6 +471,26 @@
           </set>
         </option>
       </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Java-Coding-Problems/Glava1/P02_FirstNonRepeatedCharacter" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Java-Coding-Problems/Glava1/P02_FirstNonRepeatedCharacter" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Java-Coding-Problems/Glava1/P03_ReverseWords" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Java-Coding-Problems/Glava1/P03_ReverseWords" />
+          </set>
+        </option>
+      </GradleProjectSettings>
     </option>
   </component>
 </project>

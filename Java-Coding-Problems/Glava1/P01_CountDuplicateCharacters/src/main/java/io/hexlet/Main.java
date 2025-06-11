@@ -22,9 +22,9 @@ public class Main {
         System.out.println("\n\nASCII or 16 bits Unicode characters (less than 65,535 (0xFFFF)) examples: \n");
 
         System.out.println("HashMap based solution:");
-        long startTimeV1 = System.nanoTime();
+        long startTimeV1 = System.nanoTime(); // Замер времени начала выполнения.
         Map<Character, Integer> duplicatesV1 = Strings.countDuplicateCharactersV1(TEXT);
-        displayExecutionTime(System.nanoTime() - startTimeV1);
+        displayExecutionTime(System.nanoTime() - startTimeV1); // Вывод времени выполнения
         System.out.println(Arrays.toString(duplicatesV1.entrySet().toArray()));
         // or duplicatesV1.forEach( (k, v) -> System.out.print(k + "=" + v + ", "));
 
