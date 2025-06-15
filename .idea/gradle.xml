@@ -4,6 +4,116 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/02-GetWeekends" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/02-GetWeekends" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/03-Swap-arrays" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/03-Swap-arrays" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/04-For-Loop" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/04-For-Loop" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/05-Agregaciya" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/05-Agregaciya" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/06-For-Each-Loop" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/06-For-Each-Loop" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/07-Delete-array-element" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/07-Delete-array-element" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/08-Manage-blocks" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/08-Manage-blocks" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/09-Nested-arrays" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/09-Nested-arrays" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/10-StringBuilder" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/10-StringBuilder" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/11-StringJoiner-array" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/11-StringJoiner-array" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/12-Nested-arrays" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/12-Nested-arrays" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul2/01-Java-Classes/isp5-Config-file" />
         <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
         <option name="gradleJvm" value="#JAVA_HOME" />
@@ -488,6 +598,26 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/Java-Coding-Problems/Glava1/P03_ReverseWords" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Java-Coding-Problems/Glava1/P04_ContainsOnlyDigits" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Java-Coding-Problems/Glava1/P04_ContainsOnlyDigits" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Java-Coding-Problems/Glava1/P05_CountVowelsAndConsonants" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Java-Coding-Problems/Glava1/P05_CountVowelsAndConsonants" />
           </set>
         </option>
       </GradleProjectSettings>

@@ -29,6 +29,8 @@
       <module name="08-Java-Web-Technology" target="17" />
       <module name="08-Java-Web-Technology.main" target="17" />
       <module name="08-Java-Web-Technology.test" target="17" />
+      <module name="09-Nested-arrays.main" target="17" />
+      <module name="09-Nested-arrays.test" target="17" />
       <module name="17-Middleware-p1" target="17" />
       <module name="17-Middleware.main" target="17" />
       <module name="17-Middleware.test" target="17" />
