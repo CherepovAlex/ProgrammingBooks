@@ -11,6 +11,9 @@
       <module name="02-Java-Massivy" target="17" />
       <module name="02-Java-Massivy.main" target="17" />
       <module name="02-Java-Massivy.test" target="17" />
+      <module name="03-Mirror-matrix" target="17" />
+      <module name="03-Mirror-matrix.main" target="17" />
+      <module name="03-Mirror-matrix.test" target="17" />
       <module name="05-Fabrika.main" target="17" />
       <module name="05-Fabrika.test" target="17" />
       <module name="05-HTTP-sessia-dz.05-HTTP-sessia-ru.main" target="17" />
@@ -31,6 +34,8 @@
       <module name="08-Java-Web-Technology.test" target="17" />
       <module name="09-Nested-arrays.main" target="17" />
       <module name="09-Nested-arrays.test" target="17" />
+      <module name="13-Bubble-sort.main" target="17" />
+      <module name="13-Bubble-sort.test" target="17" />
       <module name="17-Middleware-p1" target="17" />
       <module name="17-Middleware.main" target="17" />
       <module name="17-Middleware.test" target="17" />

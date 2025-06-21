@@ -114,6 +114,136 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/13-Sets" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/13-Sets" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/14-Bubble-sort" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/14-Bubble-sort" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/15-Big-O" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/15-Big-O" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/isp1-Sea-fight" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/isp1-Sea-fight" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/isp10-Ulitka" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/isp10-Ulitka" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/isp2-Pascal-Triangle" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/isp2-Pascal-Triangle" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/isp3-Mirror-matrix" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/isp3-Mirror-matrix" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/isp4-Matrix-multiple" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/isp4-Matrix-multiple" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/isp5-Dlina-last-word" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/isp5-Dlina-last-word" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/isp6-Vosrastayushaya-posled" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/isp6-Vosrastayushaya-posled" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/isp7-Hamming-weight" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/isp7-Hamming-weight" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/isp8-Chankovanie" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/isp8-Chankovanie" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/isp9-Matrix-rotation" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul1/03-Java-Arrays/isp9-Matrix-rotation" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul2/01-Java-Classes/isp5-Config-file" />
         <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
         <option name="gradleJvm" value="#JAVA_HOME" />
@@ -572,6 +702,76 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul5/03-SpringBoot/02-http-crud-dz" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul5/03-SpringBoot/02-http-crud-dz" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul5/03-SpringBoot/02-http-crud-pr" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul5/03-SpringBoot/02-http-crud-pr" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul5/03-SpringBoot/03-Firtst-start" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul5/03-SpringBoot/03-Firtst-start" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul5/03-SpringBoot/04-Annotations" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul5/03-SpringBoot/04-Annotations" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul5/03-SpringBoot/04-Annotations-pr" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul5/03-SpringBoot/04-Annotations-pr" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul5/03-SpringBoot/05-response-entity" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul5/03-SpringBoot/05-response-entity" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul5/03-SpringBoot/05-response-entity-pr" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul5/03-SpringBoot/05-response-entity-pr" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/Java-Coding-Problems/Glava1/P01_CountDuplicateCharacters" />
         <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
         <option name="gradleJvm" value="#JAVA_HOME" />
@@ -628,6 +828,46 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/Java-Coding-Problems/Glava1/P06_CountOccurrencesOfCharacter" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Sierra-Bates/01-Diving/diving" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Sierra-Bates/01-Diving/diving" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Sierra-Bates/02-Classes-and-objects/guess-game" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Sierra-Bates/02-Classes-and-objects/guess-game" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Stack-Overflow/Glava1/Razdel1_1/Razdel1_1" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Stack-Overflow/Glava1/Razdel1_1/Razdel1_1" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Stack-Overflow/Glava2/Razdel2_1" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Stack-Overflow/Glava2/Razdel2_1" />
           </set>
         </option>
       </GradleProjectSettings>
