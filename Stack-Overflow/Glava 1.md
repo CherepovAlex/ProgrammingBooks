@@ -3,7 +3,7 @@
 Раздел 1.1. Создание первой Java-программы.<br>
 Создайте в любом текстовом редакторе или в любой IDE (интегрированной среде разработки), поддерживающей язык Java, новый файл с именем HelloWorld.java. Затем вставьте в него блок кода и сохраните: <br>
 
-<pre> ```
+<pre> ```java
 public class HelloWorld {
     public static void main(String[] args) {
         Systrm.out.println("Hello, World!");
