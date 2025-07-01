@@ -7,3 +7,4 @@ public class Player {
         System.out.println("Думаю, что это число " + number);
     }
 }
+

@@ -14,10 +14,14 @@
       <module name="03-Mirror-matrix" target="17" />
       <module name="03-Mirror-matrix.main" target="17" />
       <module name="03-Mirror-matrix.test" target="17" />
-      <module name="05-Fabrika.main" target="17" />
-      <module name="05-Fabrika.test" target="17" />
       <module name="05-HTTP-sessia-dz.05-HTTP-sessia-ru.main" target="17" />
       <module name="05-HTTP-sessia-dz.05-HTTP-sessia-ru.test" target="17" />
+      <module name="05-very-powerfull-methods" target="17" />
+      <module name="05-very-powerfull-methods.main" target="17" />
+      <module name="05-very-powerfull-methods.test" target="17" />
+      <module name="06-For-Each-Loop" target="17" />
+      <module name="06-For-Each-Loop.main" target="17" />
+      <module name="06-For-Each-Loop.test" target="17" />
       <module name="07-Java-JDBC-Rabota-s-Bazoy-Dannyh" target="17" />
       <module name="07-Java-JDBC-Rabota-s-Bazoy-Dannyh.main" target="17" />
       <module name="07-Java-JDBC-Rabota-s-Bazoy-Dannyh.obschie-principy-raboty" target="17" />
@@ -34,20 +38,99 @@
       <module name="08-Java-Web-Technology.test" target="17" />
       <module name="09-Nested-arrays.main" target="17" />
       <module name="09-Nested-arrays.test" target="17" />
+      <module name="10-get-form-ru" target="17" />
+      <module name="10-get-form-ru.main" target="17" />
+      <module name="10-get-form-ru.test" target="17" />
       <module name="13-Bubble-sort.main" target="17" />
       <module name="13-Bubble-sort.test" target="17" />
+      <module name="15-Big-O" target="17" />
+      <module name="15-Big-O.main" target="17" />
+      <module name="15-Big-O.test" target="17" />
+      <module name="16-Model-View-Controller" target="17" />
+      <module name="16-Model-View-Controller.main" target="17" />
+      <module name="16-Model-View-Controller.test" target="17" />
       <module name="17-Middleware-p1" target="17" />
       <module name="17-Middleware.main" target="17" />
       <module name="17-Middleware.test" target="17" />
+      <module name="17-Middlewares-p2" target="17" />
+      <module name="17-Middlewares-p2.main" target="17" />
+      <module name="17-Middlewares-p2.test" target="17" />
+      <module name="17-Middlewares-p3" target="17" />
+      <module name="17-Middlewares-p3.main" target="17" />
+      <module name="17-Middlewares-p3.test" target="17" />
+      <module name="20-Flash-messages-dz" target="17" />
+      <module name="20-Flash-messages-dz.main" target="17" />
+      <module name="20-Flash-messages-dz.test" target="17" />
+      <module name="23-java-servlet-dz" target="17" />
+      <module name="23-java-servlet-dz.main" target="17" />
+      <module name="23-java-servlet-dz.test" target="17" />
       <module name="23-Servlets-p1" target="17" />
       <module name="23-Servlets-p1.main" target="17" />
       <module name="23-Servlets-p1.test" target="17" />
+      <module name="guess-game" target="17" />
+      <module name="guess-game.main" target="17" />
+      <module name="guess-game.test" target="17" />
       <module name="io.hexlet.23-java-servlet-gradle" target="17" />
       <module name="io.hexlet.23-java-servlet-gradle.main" target="17" />
       <module name="io.hexlet.23-java-servlet-gradle.test" target="17" />
+      <module name="isp2-Pascal-Triangle" target="17" />
+      <module name="isp2-Pascal-Triangle.main" target="17" />
+      <module name="isp2-Pascal-Triangle.test" target="17" />
+      <module name="isp3-Base-auth" target="17" />
+      <module name="isp3-Base-auth.main" target="17" />
+      <module name="isp3-Base-auth.test" target="17" />
+      <module name="isp3-Mirror-matrix" target="17" />
+      <module name="isp3-Mirror-matrix.main" target="17" />
+      <module name="isp3-Mirror-matrix.test" target="17" />
+      <module name="isp7-Hamming-weight" target="17" />
+      <module name="isp7-Hamming-weight.main" target="17" />
+      <module name="isp7-Hamming-weight.test" target="17" />
       <module name="jte" target="17" />
       <module name="jte.main" target="17" />
       <module name="jte.test" target="17" />
+      <module name="P06_CountOccurrencesOfCharacter" target="17" />
+      <module name="P06_CountOccurrencesOfCharacter.main" target="17" />
+      <module name="P06_CountOccurrencesOfCharacter.test" target="17" />
+      <module name="primitives-and-references" target="17" />
+      <module name="primitives-and-references.main" target="17" />
+      <module name="primitives-and-references.test" target="17" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="02-http-crud-pr" options="-parameters -Xlint:-processing" />
+      <module name="02-http-crud-pr.main" options="-parameters -Xlint:-processing" />
+      <module name="02-http-crud-pr.test" options="-parameters -Xlint:-processing" />
+      <module name="04-Annotations-pr" options="-parameters" />
+      <module name="04-Annotations-pr.main" options="-parameters" />
+      <module name="04-Annotations-pr.test" options="-parameters" />
+      <module name="05-response-entity" options="-parameters -Xlint:-processing" />
+      <module name="05-response-entity-pr" options="-parameters -Xlint:-processing" />
+      <module name="05-response-entity-pr.main" options="-parameters -Xlint:-processing" />
+      <module name="05-response-entity-pr.test" options="-parameters -Xlint:-processing" />
+      <module name="05-response-entity.main" options="-parameters -Xlint:-processing" />
+      <module name="05-response-entity.test" options="-parameters -Xlint:-processing" />
+      <module name="06-rest-api" options="-parameters -Xlint:-processing" />
+      <module name="06-rest-api.main" options="-parameters -Xlint:-processing" />
+      <module name="06-rest-api.test" options="-parameters -Xlint:-processing" />
+      <module name="07-Templater-ru" options="-Xlint:-processing" />
+      <module name="07-Templater-ru.main" options="-Xlint:-processing" />
+      <module name="07-Templater-ru.test" options="-Xlint:-processing" />
+      <module name="08-layout-dz" options="-Xlint:-processing" />
+      <module name="08-layout-dz.main" options="-Xlint:-processing" />
+      <module name="08-layout-dz.test" options="-Xlint:-processing" />
+      <module name="10-get-form-ru" options="-Xlint:-processing" />
+      <module name="10-get-form-ru.main" options="-Xlint:-processing" />
+      <module name="10-get-form-ru.test" options="-Xlint:-processing" />
+      <module name="13-Validation-dz" options="-Xlint:-processing" />
+      <module name="13-Validation-dz.main" options="-Xlint:-processing" />
+      <module name="13-Validation-dz.test" options="-Xlint:-processing" />
+      <module name="13-validation-ru" options="-Xlint:-processing" />
+      <module name="13-validation-ru.main" options="-Xlint:-processing" />
+      <module name="13-validation-ru.test" options="-Xlint:-processing" />
+      <module name="23-java-servlet-dz" options="-Xlint:-processing" />
+      <module name="23-java-servlet-dz.main" options="-Xlint:-processing" />
+      <module name="23-java-servlet-dz.test" options="-Xlint:-processing" />
+    </option>
   </component>
 </project>

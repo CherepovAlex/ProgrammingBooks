@@ -5,39 +5,25 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/01-Bezopasnaya-registraciya.main.iml" filepath="$PROJECT_DIR$/.idea/modules/01-Bezopasnaya-registraciya.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/01-Obrabotchiki-zaprosov.main.iml" filepath="$PROJECT_DIR$/.idea/modules/01-Obrabotchiki-zaprosov.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/05-Fabrika-ru.main.iml" filepath="$PROJECT_DIR$/.idea/modules/05-Fabrika-ru.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/07-Templater-dz.main.iml" filepath="$PROJECT_DIR$/.idea/modules/07-Templater-dz.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/05-Fabrika.main.iml" filepath="$PROJECT_DIR$/.idea/modules/05-Fabrika.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/07-Templater-ru.main.iml" filepath="$PROJECT_DIR$/.idea/modules/07-Templater-ru.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/08-layout-dz.main.iml" filepath="$PROJECT_DIR$/.idea/modules/08-layout-dz.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/08-layout-ru.main.iml" filepath="$PROJECT_DIR$/.idea/modules/08-layout-ru.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/10-get-form-ru.main.iml" filepath="$PROJECT_DIR$/.idea/modules/10-get-form-ru.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/10-get-form.main.iml" filepath="$PROJECT_DIR$/.idea/modules/10-get-form.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/12-post-form-ru.main.iml" filepath="$PROJECT_DIR$/.idea/modules/12-post-form-ru.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/12-post-form.main.iml" filepath="$PROJECT_DIR$/.idea/modules/12-post-form.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/13-Validation-dz.main.iml" filepath="$PROJECT_DIR$/.idea/modules/13-Validation-dz.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/13-validation-ru.main.iml" filepath="$PROJECT_DIR$/.idea/modules/13-validation-ru.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/16-Model-View-Controller-dz.main.iml" filepath="$PROJECT_DIR$/.idea/modules/16-Model-View-Controller-dz.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/16-Model-View-Controller.main.iml" filepath="$PROJECT_DIR$/.idea/modules/16-Model-View-Controller.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/17-Middlewares-dz.main.iml" filepath="$PROJECT_DIR$/.idea/modules/17-Middlewares-dz.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/17-Middlewares-p1.main.iml" filepath="$PROJECT_DIR$/.idea/modules/17-Middlewares-p1.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/17-Middlewares-p2.main.iml" filepath="$PROJECT_DIR$/.idea/modules/17-Middlewares-p2.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/17-Middlewares-p3.main.iml" filepath="$PROJECT_DIR$/.idea/modules/17-Middlewares-p3.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/18-Cookies-p1.main.iml" filepath="$PROJECT_DIR$/.idea/modules/18-Cookies-p1.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/18-Cookies_dz.main.iml" filepath="$PROJECT_DIR$/.idea/modules/18-Cookies_dz.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/19-Sessions-dz.main.iml" filepath="$PROJECT_DIR$/.idea/modules/19-Sessions-dz.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/19-Sessions-p1.main.iml" filepath="$PROJECT_DIR$/.idea/modules/19-Sessions-p1.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/19-Sessions-ru.main.iml" filepath="$PROJECT_DIR$/.idea/modules/19-Sessions-ru.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/20-Flash-messages-dz.main.iml" filepath="$PROJECT_DIR$/.idea/modules/20-Flash-messages-dz.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/20-Flash-messages-p2.main.iml" filepath="$PROJECT_DIR$/.idea/modules/20-Flash-messages-p2.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/20-Flash-messages.main.iml" filepath="$PROJECT_DIR$/.idea/modules/20-Flash-messages.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/21-Work-with-JDBC-dz.main.iml" filepath="$PROJECT_DIR$/.idea/modules/21-Work-with-JDBC-dz.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/21-Work-with-JDBC-users.main.iml" filepath="$PROJECT_DIR$/.idea/modules/21-Work-with-JDBC-users.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/21-Work-with-JDBC.main.iml" filepath="$PROJECT_DIR$/.idea/modules/21-Work-with-JDBC.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/23-java-servlet-dz.main.iml" filepath="$PROJECT_DIR$/.idea/modules/23-java-servlet-dz.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/23-java-servlet-gradle.main.iml" filepath="$PROJECT_DIR$/.idea/modules/23-java-servlet-gradle.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/ProgrammingBooks.iml" filepath="$PROJECT_DIR$/ProgrammingBooks.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/io.hexlet.05-Fabrika.main.iml" filepath="$PROJECT_DIR$/.idea/modules/io.hexlet.05-Fabrika.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/isp1-Response-Time.main.iml" filepath="$PROJECT_DIR$/.idea/modules/isp1-Response-Time.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isp2-Filmopoisl.main.iml" filepath="$PROJECT_DIR$/.idea/modules/isp2-Filmopoisl.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isp3-Base-auth.main.iml" filepath="$PROJECT_DIR$/.idea/modules/isp3-Base-auth.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isp2-filmopoisk-ru.main.iml" filepath="$PROJECT_DIR$/.idea/modules/isp2-filmopoisk-ru.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isp3-Base-auth-ru.main.iml" filepath="$PROJECT_DIR$/.idea/modules/isp3-Base-auth-ru.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isp4-Avatars-ru.main.iml" filepath="$PROJECT_DIR$/.idea/modules/isp4-Avatars-ru.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isp4-Avatars.main.iml" filepath="$PROJECT_DIR$/.idea/modules/isp4-Avatars.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isp5-Guess-number-ru.main.iml" filepath="$PROJECT_DIR$/.idea/modules/isp5-Guess-number-ru.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/isp5-Guess-number.main.iml" filepath="$PROJECT_DIR$/.idea/modules/isp5-Guess-number.main.iml" />
     </modules>
   </component>
