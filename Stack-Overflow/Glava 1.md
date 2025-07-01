@@ -4,7 +4,8 @@
 Создайте в любом текстовом редакторе или в любой IDE (интегрированной среде разработки), поддерживающей язык Java, новый файл с именем HelloWorld.java. Затем вставьте в него блок кода и сохраните: <br>
 
 ```java
-public class HelloWorld{
+public class HelloWorld {
     public static void main(String[] args) {
-        System.out.println("Hello, World!"); } } 
+        System.out.println("Hello, World!"); } 
+} 
 ```
