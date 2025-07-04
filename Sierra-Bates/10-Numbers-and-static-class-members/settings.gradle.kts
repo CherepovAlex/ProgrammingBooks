@@ -1,0 +1,1 @@
+rootProject.name = "10-Numbers-and-static-class-members"

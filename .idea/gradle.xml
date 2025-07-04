@@ -793,6 +793,15 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Sierra-Bates/10-Numbers-and-static-class-members" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Sierra-Bates/10-Numbers-and-static-class-members" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/Stack-Overflow/Glava1/Razdel1_1/Razdel1_1" />
         <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
         <option name="gradleJvm" value="#JAVA_HOME" />
