@@ -821,6 +821,16 @@
           </set>
         </option>
       </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Stack-Overflow/Glava3/Glava3" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Stack-Overflow/Glava3/Glava3" />
+          </set>
+        </option>
+      </GradleProjectSettings>
     </option>
   </component>
 </project>
