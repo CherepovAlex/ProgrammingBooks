@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/Practice/Practice" />
     <file type="web" url="file://$PROJECT_DIR$/Sierra-Bates/08-Serious-poly" />
     <file type="web" url="file://$PROJECT_DIR$/Sierra-Bates/09-Constructors-and-garbageCollector" />
     <file type="web" url="file://$PROJECT_DIR$/Sierra-Bates/10-Numbers-and-static-class-members" />
