@@ -115,14 +115,76 @@ public String[] read(InputStream stream) throws IOException {
 }
 ```
 
+[к оглавлению Глава 6](#глава-6-документирование-java-кода)
+
 ## Раздел 6.4. Документирование пакета
 _Версия>=Java SE5_
 
 В Javadocs можно создавать документацию на уровне пакетов, используя файл `package-info.java`. Этот файл должен быть отформатирован так, как это представлено ниже. Символы пробелов и звездочки необязательны, обычно они присутствуют в каждой строке для форматирования.
 
 ```java
+/**
+ * Краткое описание пакета, заканчивающееся точкой.
+ * 
+ * Между кратким описанием и дальнейшей информацией принято оставлять пустую строку.
+ * Краткое описание (всё, что расположено до первой точки) используется в классе
+ * или пакете в качестве предварительного описания класса. После пустой строки следует
+ * подобным образом описать функциональность пакета.
+ * 
+ * Здесь могут использоваться строчные теги, такие как {@code code here},
+ *  {@link reference.to.other.Documentation}, а также {@literal text here}
+ */
+package com.example.foo;
 
+// Остальная часть файла должна оставаться пустой.
 ```
+
+В приведённом выше случае необходимо поместить этот файл `package-info.java` в папку Java-пакета com.example.foo.
+
+[к оглавлению Глава 6](#глава-6-документирование-java-кода)
+
+## Раздел 6.5. Ссылки
+
+Создать ссылки на другие документы Javadoc можно с помощью тега `@link`:
+
+```java
+/**
+ * Вы можете создать ссылку на документацию javadoc уже импортированного класса с помощью тега
+ *  {@link ClassName}
+ *  
+ * Вы можете также использовать полное имя, если класс ещё не импортирован:
+ * {@link some.other.ClassName}
+ * 
+ * Также вы можете создавать ссылки на любые члены (поля или методы) класса, например, так: 
+ *      {@link ClassName#somrMethod()}
+ *      {@link ClassName#someMethodWithParameters(int, String)}     
+ *      {@link ClassName#someField}
+ *      {@link #someMethodnThisClass()} - этот тег используется для ссылки на члены текущего класса
+ *      
+ * Вы можете добавить метку к связанной с классом документации, например, так:
+ *  {@link ClassName#someMethod() link text}
+ */
+```
+    You can link to the javadoc of an already imported class using ClassName
+    You can also use th fully-qualified name, if the class is no already imported: some.other.ClassName
+    You can link to members (fields or methods) of a class like so:
+        ClassName.someMethod()
+        ClassName.someMethodWithParameters(int, String)
+        ClassName.someField
+        someMethodInThisClass() - used to link to members in the current class
+    You can also add label to a linked javadoc like so: link text
+
+С помощью тега `@see` можно добавлять элементы в раздел _See also_. Как и в случае с `@param` или **`return`**, место, где они появляются, не имеет значения. В спецификации говорится, что его следует писать после `@return`.
+
+```java
+/**
+ * Этот метод имеет хорошее объяснение, но вы можете найти и другую информацию
+ * в нижней части.
+ * @see ClassName#someMethod()
+ */
+```
+
+
 
 [к оглавлению Глава 6](#глава-6-документирование-java-кода)
 
@@ -133,3 +195,5 @@ _Версия>=Java SE5_
 [Раздел 6.3](#раздел-63-документирование-методов)
 
 [Раздел 6.4](#раздел-64-документирование-пакета)
+
+[Раздел 6.5](#раздел-65-ссылки)
