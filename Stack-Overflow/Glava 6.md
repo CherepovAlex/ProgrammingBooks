@@ -174,7 +174,7 @@ package com.example.foo;
         someMethodInThisClass() - used to link to members in the current class
     You can also add label to a linked javadoc like so: link text
 
-С помощью тега `@see` можно добавлять элементы в раздел _See also_. Как и в случае с `@param` или **`return`**, место, где они появляются, не имеет значения. В спецификации говорится, что его следует писать после `@return`.
+С помощью тега `@see` можно добавлять элементы в раздел _See also_. Как и в случае с `@param` или **`@return`**, место, где они появляются, не имеет значения. В спецификации говорится, что его следует писать после `@return`.
 
 ```java
 /**
@@ -183,6 +183,63 @@ package com.example.foo;
  * @see ClassName#someMethod()
  */
 ```
+
+Если необходимо добавить **ссылки на внешние ресурсы**, можно просто использовать HTML-тег `<a>`. Его можно использовать в любом месте строки или внутри тегов `@link` и `@see`.
+
+```java
+/**
+ * Интересно, как это работает? Возможно, вы захотите
+ * проверить этот <a href="http://stackoverflow.com/">Stack Overflow</a>
+ * 
+ * @see <a href="http://stackoverflow.com/">Stack Overflow</a>
+ */
+```
+
+[к оглавлению Глава 6](#глава-6-документирование-java-кода)
+
+## Раздел 6.6 Фрагменты кода внутри документации
+
+Каноническим способом написания кода внутри документации является конструкция `{@code }`. Если многострочный код обернут внутри `<pre></pre`.
+
+```java
+/**
+ * Класс TestUtils
+ * <p>
+ * Это {@code inline("пример кода")}.     
+ * <p>
+ * При написании многострочного кода его следует обернуть в теги pre.
+ * <pre>{@code}
+ * Пример example1 = new FirstLineExample();
+ * example1.butYouCanHaveMoreThanOneLine();
+ * }</pre>
+ * Спасибо за чтение.
+ */
+class TestUtils{ }
+```
+
+Иногда бывает необходимо поместить сложный код внутри комментария javadoc. Особую проблему представляет знак @. Использование старого тега `<code>` наряду с конструкцией `{@literal}` решает эту проблему:
+
+```java
+/**
+ * Usage:
+ * <pre><code>
+ * class SomethingTest {
+ * {@literal @} Rule
+ * public SingleTestRule singleTestRule = new SingleTestRule("test");
+ * 
+ * {@literal @} Test
+ * public void test1() {
+ *      // будет выполнен только этот тест
+ *      }
+ *      
+ * ...  
+ * }
+ * </code}</pre>
+ */
+class SingleTestRule implements TestRule{ }
+```
+
+## Раздел 6.7 Документирование полей
 
 
 
@@ -197,3 +254,7 @@ package com.example.foo;
 [Раздел 6.4](#раздел-64-документирование-пакета)
 
 [Раздел 6.5](#раздел-65-ссылки)
+
+[Раздел 6.6](#раздел-66-фрагменты-кода-внутри-документации)
+
+[Раздел 6.7ъ](#раздел-67-документирование-полей)
