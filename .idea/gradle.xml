@@ -743,16 +743,6 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$/Shildt/Test" />
-        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
-        <option name="gradleJvm" value="#JAVA_HOME" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/Shildt/Test" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/Sierra-Bates/01-Diving/diving" />
         <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
         <option name="gradleJvm" value="#JAVA_HOME" />
@@ -868,6 +858,15 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/Stack-Overflow/Glava3/Glava3" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/ШП Иннополис/Test" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/ШП Иннополис/Test" />
           </set>
         </option>
       </GradleProjectSettings>

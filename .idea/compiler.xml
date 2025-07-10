@@ -94,7 +94,6 @@
       <module name="primitives-and-references" target="17" />
       <module name="primitives-and-references.main" target="17" />
       <module name="primitives-and-references.test" target="17" />
-      <module name="Test" target="21" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

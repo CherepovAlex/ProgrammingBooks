@@ -1,6 +1,7 @@
 package exercise.jframe;
 
 import javax.swing.*;
+// тут хранятся ActionListener и ActionEvent
 import java.awt.event.*;
 // реализуем интерфейс ActionListener
 public class SimpleGui1B implements ActionListener {
@@ -19,11 +20,12 @@ public class SimpleGui1B implements ActionListener {
         button.addActionListener(this); // регистрируем нашу заинтересованность в кнопке
 
         frame.getContentPane().add(button);
+
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(300, 300);
         frame.setVisible(true);
     }
-    // реализуем метод actionPerformed- метод обработки событий
+    // реализуем метод actionPerformed (инт ActionListener)- метод обработки событий
     public void actionPerformed(ActionEvent event) {
         button.setText("I've been clicked!"); // кнопка вызывает этот метод
     }
