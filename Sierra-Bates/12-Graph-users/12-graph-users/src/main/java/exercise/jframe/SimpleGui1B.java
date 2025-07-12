@@ -2,6 +2,7 @@ package exercise.jframe;
 
 import javax.swing.*;
 // тут хранятся ActionListener и ActionEvent
+import java.awt.*;
 import java.awt.event.*;
 // реализуем интерфейс ActionListener
 public class SimpleGui1B implements ActionListener {
@@ -19,7 +20,7 @@ public class SimpleGui1B implements ActionListener {
 
         button.addActionListener(this); // регистрируем нашу заинтересованность в кнопке
 
-        frame.getContentPane().add(button);
+        frame.getContentPane().add(BorderLayout.CENTER, button);
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(300, 300);

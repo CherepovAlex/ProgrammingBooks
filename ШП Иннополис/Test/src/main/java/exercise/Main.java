@@ -50,3 +50,4 @@ class Array {
         return maxCount;
     }
 }
+
