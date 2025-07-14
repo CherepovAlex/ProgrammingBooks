@@ -1,0 +1,1 @@
+rootProject.name = "isp2-Triangle"
