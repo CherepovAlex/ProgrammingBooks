@@ -1,6 +1,6 @@
-package exercise;
+package exercise.Consultation2;
 
-public class Main2 implements MyInterface{
+public class Main2 implements MyInterface {
 
     public static void main(String[] args) {
         var ob = new Main2();
@@ -8,13 +8,16 @@ public class Main2 implements MyInterface{
         ob.myTwo();
         MyInterface.myThree();
     }
-    public void myTwo(){
-            System.out.println("two");
+
+    public void myTwo() {
+        System.out.println("two");
     }
 }
 
 interface MyInterface {
-    default void myOne() { System.out.println("one"); }
+    default void myOne() {
+        System.out.println("one");
+    }
 
     void myTwo();
 

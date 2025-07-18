@@ -1,4 +1,4 @@
-package exercise;
+package exercise.Consultation2;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

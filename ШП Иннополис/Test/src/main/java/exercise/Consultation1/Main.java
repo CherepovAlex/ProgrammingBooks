@@ -1,6 +1,5 @@
-package exercise;
+package exercise.Consultation1;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Scanner;
 
@@ -28,8 +27,6 @@ public class Main {
         int[] array = {1, 1, 0, 1, 1, 1};
         int result = Array.maxRange(array);
         System.out.println("Maximum digits of 1: " + result);
-
-        int[] nums = {3,2,2,3};
 
     }
 }

@@ -244,6 +244,26 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul2/02-Java-Lists/Upragneniya" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul2/02-Java-Lists/Upragneniya" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul2/02-Java-Lists/isp5-mix-list" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul2/02-Java-Lists/isp5-mix-list" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul3/03-Java-OOP/01-Bezopasnaya-registraciya" />
         <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
         <option name="gradleJvm" value="#JAVA_HOME" />
@@ -709,6 +729,16 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/Hexlet/Modul5/03-SpringBoot/06-rest-api-dz" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul6/01Threads" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul6/01Threads" />
           </set>
         </option>
       </GradleProjectSettings>

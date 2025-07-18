@@ -1,4 +1,4 @@
-package exercise;
+package exercise.Consultation1;
 
 
 public class Palindrom {
