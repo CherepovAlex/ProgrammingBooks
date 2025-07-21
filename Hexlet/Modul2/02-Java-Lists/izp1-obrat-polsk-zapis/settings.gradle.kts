@@ -1,0 +1,1 @@
+rootProject.name = "izp1-obrat-polsk-zapis"

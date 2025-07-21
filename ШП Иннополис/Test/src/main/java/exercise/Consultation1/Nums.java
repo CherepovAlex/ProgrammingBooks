@@ -31,5 +31,6 @@ public class Nums {
         while (write < nums.length) {
             nums[write++] = val;
         }
+
     }
 }

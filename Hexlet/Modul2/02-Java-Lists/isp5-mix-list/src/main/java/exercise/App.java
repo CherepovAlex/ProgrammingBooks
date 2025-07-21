@@ -5,25 +5,22 @@ import java.util.List;
 
 public class App {
     // BEGIN (write your solution here)
-    public static List<Integer> mix(List<Integer> list) {
-        List<Integer> newList = new ArrayList<>();
-        if (list.size() % 2 != 0) {
-            for (int i = 0; i <= list.size() / 2; i++) {
-                newList.add(list.get(i));
+    public static List<Integer> mix(List<Integer> coll) {
+        List<Integer> result = new ArrayList<>();
 
-                if (i != (list.size() - 1 - i)) {
-                    newList.add(list.get(list.size() - 1 - i));
-                }
-            }
-        } else {
-            for (int i = 0; i < list.size() / 2; i++) {
-                newList.add(list.get(i));
-                if (i != (list.size() - 1 - i)) {
-                    newList.add(list.get(list.size() - 1 - i));
-                }
+        var left = 0;
+        var right = coll.size() - 1;
+
+        while (left <= right) {
+            result.add(coll.get(left));
+            left++;
+
+            if (left <= right) {
+                result.add(coll.get(right));
+                right--;
             }
         }
-        return newList;
+        return result;
     }
     // END
 
