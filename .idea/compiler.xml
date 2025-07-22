@@ -82,6 +82,10 @@
       <module name="isp3-Mirror-matrix" target="17" />
       <module name="isp3-Mirror-matrix.main" target="17" />
       <module name="isp3-Mirror-matrix.test" target="17" />
+      <module name="isp3-mixing-list" target="21" />
+      <module name="isp3-mixing-list.main" target="21" />
+      <module name="isp3-mixing-list.test" target="21" />
+      <module name="isp3-uniq-lis" target="21" />
       <module name="isp7-Hamming-weight" target="17" />
       <module name="isp7-Hamming-weight.main" target="17" />
       <module name="isp7-Hamming-weight.test" target="17" />
