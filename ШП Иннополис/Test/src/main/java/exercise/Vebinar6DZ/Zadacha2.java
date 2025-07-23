@@ -14,7 +14,6 @@ public class Zadacha2 {
 
         System.out.println("U Vasya: " + KMN[vChoice] + ", U Petya: " + KMN[pChoice]);
         System.out.println(decideWinner(vChoice, pChoice));
-
     }
 
     public static String decideWinner(int vChoice, int pChoice) {
