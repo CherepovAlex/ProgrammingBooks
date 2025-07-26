@@ -23,6 +23,7 @@ public class z8 {
             System.out.println("Введенное значение является палиндромом");
         else
             System.out.println("Введенное значение не является палиндромом");
+
     }
 
 }

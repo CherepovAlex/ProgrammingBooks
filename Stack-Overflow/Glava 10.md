@@ -361,6 +361,64 @@ System.out.println(Objects.equal(val3, val4);   // true
 
 ## Раздел 10.9. Примитивный тип данных boolean
 
+Переменная с типом данных `boolean` может хранить одно из двух значений - `true` или `false`
+
+```java
+boolean foo = true;
+System.out.println("foo = " + foo);                 // foo = true
+
+boolean bar = false;
+System.out.println("bar = " + bar);                 // bar = false
+
+boolean notFoo = !foo;
+System.out.println("notFoo = " + notFoo);           // notFoo = false
+
+boolean fooAndBar = foo && bar;
+System.out.println("fooAndBar = " + fooAndBar);     // fooAndBar = false
+
+boolean fooOrBar = foo || bar;
+System.put.println("fooOrBar = " + fooOrBar);       // fooOrBar = true
+
+boolean fooXorBar = foo ^ bar;
+System.out.println("fooXorBar = " + fooXorBar);     // fooXorBar = true
+```
+
+По умолчанию значение переменной типа `boolean` равно `false`.
+
+```java
+boolean defaultBoolean;             // defaultBoolean == false
+```
+
+[к оглавлению Глава 10](#глава-10-примитивные-типы-данных)
+
+## Раздел 10.10. Примитивный тип данных byte
+
+Тип данных `byte` - это 8-разрядное знаковое целое число. Оно имеет диапазон от минимального значение -2^7 (-128) и до максимального значение 2^7 - 1 (127)
+
+```java
+byte example = -36;
+byte myByte = 96;
+byte anotherByte = 7;
+
+byte addedBytes = (byte) (myByte + anotherByte);    // 103
+byte substructedBytes = (byte) (myByte - anotherByte);    // 89
+```
+
+Максимальное и минимальное значение `byte` можно определить следующим образом:
+
+```java
+byte high = Byte.MAX_VALUE;     // high == 127
+byte low = Byte.MIN_VALUE;     // high == -128
+```
+
+По умолчанию значение переменной типа `byte` равно 0.
+
+```java
+byte defaultByte;       // defaultByte == 0
+```
+
+## Раздел 10.11. Представление отрицательных значений
+
 
 
 [к оглавлению Глава 10](#глава-10-примитивные-типы-данных)
@@ -380,3 +438,9 @@ System.out.println(Objects.equal(val3, val4);   // true
 [Раздел 10.7. Примитивный тип данных double](#раздел-107-примитивный-тип-данных-double)
 
 [Раздел 10.8. Примитивный тип данных long](#раздел-108-примитивный-тип-данных-long)
+
+[Раздел 10.9. Примитивный тип данных boolean](#раздел-109-примитивный-тип-данных-boolean)
+
+[Раздел 10.10. Примитивный тип данных byte](#раздел-1010-примитивный-тип-данных-byte)
+
+[Раздел 10.11. Представление отрицательных значений](#раздел-1011-представление-отрицательных-значений)

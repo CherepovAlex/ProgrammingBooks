@@ -28,7 +28,7 @@
     <file type="web" url="file://$PROJECT_DIR$/Stack-Overflow/Glava8/glava8" />
     <file type="web" url="file://$PROJECT_DIR$/ШП Иннополис/Test" />
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_22" project-jdk-name="21" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="21" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
