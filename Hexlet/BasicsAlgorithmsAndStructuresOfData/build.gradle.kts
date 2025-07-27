@@ -11,9 +11,7 @@ repositories {
 
 dependencies {
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
-    implementation("com.google.code.gson:gson:2.10.1")
     testImplementation("org.junit.jupiter:junit-jupiter")
-    implementation("org.seleniumhq.selenium:selenium-java:4.0.0")
 }
 
 tasks.test {
