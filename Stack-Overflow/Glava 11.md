@@ -510,7 +510,7 @@ import java.util.stream.Stream;
 
 Stream<String> stringStream = Stream.of("foo", "bar", "foobar");
 String joined = stringStream.collect(Collectors.joining(",", "{", "}"));
-System.out.println(joined);     // Выводит "{oo, bar, foobar}".
+System.out.println(joined);     // Выводит "{foo, bar, foobar}".
 ```
 
 [к оглавлению Глава 11](#глава-11-строки)
