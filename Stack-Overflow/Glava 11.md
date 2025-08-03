@@ -425,14 +425,16 @@ while (tokenizer.hasMoreTokens()) {
 ```
 
 В результате работы программы на экран будет выведено:
-`the
+```bash
+the
 lazy
 foz
 jumped
 over
 the 
 brown
-fence`
+fence
+```
 
 Для разделения исходной строки можно использовать различные наборы символов:
 
@@ -449,10 +451,12 @@ while (tokenizer.hasMoreTokens()) {
 
 В результате будет выведено:
 
-`j
+```bash
+j
 mp
 d ov
 r`
+```
 
 [к оглавлению Глава 11](#глава-11-строки)
 
