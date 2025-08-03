@@ -1,0 +1,12 @@
+src/main/java/io/hexlet/App.java
+В классе App реализуйте публичный статический метод scrabble(), который принимает на вход два параметра: 
+набор символов в нижнем регистре (строку) и слово. Метод должен проверить, 
+можно ли из переданного набора составить это слово. В результате вызова метод возвращает true или false.
+
+При проверке учитывается количество символов, нужных для составления слова, и не учитывается их регистр.
+
+App.scrabble("rkqodlw", "world"); // true
+App.scrabble("avj", "java"); // false
+App.scrabble("avjafff", "java"); // true
+App.scrabble("", "hexlet"); // false
+App.scrabble("scriptingjava", "JavaScript"); // true
