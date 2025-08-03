@@ -455,13 +455,67 @@ while (tokenizer.hasMoreTokens()) {
 j
 mp
 d ov
-r`
+r
 ```
 
 [к оглавлению Глава 11](#глава-11-строки)
 
 ## Раздел 11.6. Объединение строк с помощью разделителя
 
+_Версия >= Java SE 8_
+
+Массив строк может быть объединён с помощью статического метода `String.join()`:
+
+```java
+String[] elements = {"foo", "bar", "foobar"};
+String singleString = String.join(" + ", elements);
+
+System.out.println(singleString);   // Печатается "foo + bar + foobar"
+```
+
+Аналогично, для интерфейса `Iterable` существует перегруженный метод `String.join()`.
+
+Для более тонкого контроля над объединением строк можно использовать класс `StringJoiner`:
+
+```java
+import java.util.StringJoiner;
+
+StringJoiner sj = new StringJoiner(", ", "[", "]");
+    // Последние два аргумента являются необязательными
+    // они определяют префикс и суффикс для результирующей строки
+
+sj.add("foo");
+sj.add("bar");
+sj.add("foobar");
+
+System.out.println(sj);     // Выводит "[foo, bar, foobar]".
+```
+
+Для объединения потока строк можно использовать метод `Collectors.joining()`. Более подробно ознакомиться с ним можно, перейдя по адресу (https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html#joining-java.lang.CharSequence-).
+
+```java
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+Stream<String> stringStream = Stream.of("foo", "bar", "foobar");
+String joined = stringStream.collect(Collectors.joining(", "));
+System.out.println(joined);     // Выводит "foo, bar, foobar".
+```
+
+В этом методе также есть возможность определить префикс и суффикс:
+
+```java
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+Stream<String> stringStream = Stream.of("foo", "bar", "foobar");
+String joined = stringStream.collect(Collectors.joining(",", "{", "}"));
+System.out.println(joined);     // Выводит "{oo, bar, foobar}".
+```
+
+[к оглавлению Глава 11](#глава-11-строки)
+
+## Раздел 11.7. Конкатенация строк и класс StringBuilder
 
 
 
@@ -477,9 +531,9 @@ r`
 
 [Раздел 11.5. Разделение строк на подстроки](#раздел-115-разделение-строк-на-подстроки)
 
+[Раздел 11.6. Объединение строк с помощью разделителя](#раздел-116-объединение-строк-с-помощью-разделителя)
 
-
-
+[Раздел 11.7. Конкатенация строк и класс StringBuilder](#раздел-117-конкатенация-строк-и-класс-stringbuilder)
 
 
 
