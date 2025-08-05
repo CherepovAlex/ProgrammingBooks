@@ -1,5 +1,13 @@
 package _14LongestCommonPrefix;
-
+// Напишите функцию для поиска самого длинного общего префикса в массиве строк.
+//Если общего префикса нет, верните пустую строку ""
+// Пример 1:
+//Ввод: strs = ["flower", "flow", "flight"]
+//Вывод: "fl"
+//Пример 2:
+//Входные данные: strs = [«собака», «гоночный автомобиль», «автомобиль»]
+//Выходные данные: ""
+//Пояснение: Во входных строках нет общего префикса.
 public class Solution {
     // time O(s), s - summa all of simbols in strs; space O(1)
     public String longestCommonPrefix(String[] strs) {
@@ -18,9 +26,11 @@ public class Solution {
     }
 
     // binary search
+    // time O(s*log n), n - length os most short str, space - O(1)
     public String longestCommonPrefix1(String[] strs) {
         if (strs == null || strs.length == 0) return "";
 
+        // Ищется максимальная длина mid, для которой подстрока первых mid символов является префиксом всех строк.
         int minLen = Integer.MAX_VALUE;
         for (String str : strs) {
             minLen = Math.min(minLen, str.length());
@@ -30,15 +40,19 @@ public class Solution {
         int high = minLen;
         while (low <= high) {
             int mid = (low + high) / 2;
+//            System.out.println(mid);
+            // Если для текущего mid префикс общий, ищется более длинный префикс (сдвигается low).
             if (isCommonPrefix(strs, mid)) {
                 low = mid + 1;
             } else {
+                // Если не общий - ищется более короткий (сдвигается high).
                 high = mid - 1;
             }
         }
         return strs[0].substring(0, (low + high) / 2);
     }
 
+    // проверяет, является ли подстрока первых len символов первой строки префиксом всех остальных строк.
     private boolean isCommonPrefix(String[] strs, int len) {
         String prefix = strs[0].substring(0, len);
         for (int i = 1; i < strs.length; i++) {
@@ -46,6 +60,7 @@ public class Solution {
                 return false;
             }
         }
+//        System.out.println(true);
         return true;
     }
 
