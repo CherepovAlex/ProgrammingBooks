@@ -1,4 +1,4 @@
-import org.w3c.dom.Node;
+package Zadacha2;
 
 import java.util.ArrayList;
 
