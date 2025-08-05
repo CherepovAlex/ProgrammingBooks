@@ -670,6 +670,41 @@ System.out.prinln(String.format('line 1: %s.%nline 2: %s%n', lines[0], lines[1])
 
 ## Раздел 11.10. Выполнение реверса строк
 
+Существует несколько способов реализации реверса строки, чтобы символы в ней располагались в порядке, обратном первоначальному.
+
+1. На основе использования объекта `StringBuilder/StringBuffer`:
+
+```java
+String code = "code";
+System.out.println(code);
+
+StringBuilder sb = new StringBuilder(code);
+code = sb.reverse().toString();
+
+System.out.println(code);
+```
+
+2. На основе использования массива символов:
+
+```java
+String code = "code";
+System.out.println(code);
+
+char[] array = code.toCharArray();
+for (int index = 0, mirrorIndex = array.length - 1; index < mirrorIndex; index++, mirroredIndex--) {
+    char temp = array[index];
+    array[index] = array[mirroredIndex];
+    array[mirroredIndex] = temp;
+}
+
+// print reversed
+System.out.println(new String(array));
+```
+
+[к оглавлению Глава 11](#глава-11-строки)
+
+## Раздел 11.11. Добавление метода toString() в объекты пользователя
+
 
 
 [к оглавлению Глава 11](#глава-11-строки)
@@ -692,7 +727,7 @@ System.out.prinln(String.format('line 1: %s.%nline 2: %s%n', lines[0], lines[1])
 
 [Раздел 11.9. Платформонезависимая реализация добавления символа перевода строки ](#раздел-119-платформонезависимая-реализация-добавления-символа-перевода-строки-)
 
-
+[Раздел 11.10. Выполнение реверса строк](#раздел-1110-выполнение-реверса-строк)
 
 
 
