@@ -1,6 +1,6 @@
 package Arrays;
 
-public class Exampl3 {
+public class Example3 {
     public static void main(String[] args) {
 
         // Declare an integer array of 10 elements.
