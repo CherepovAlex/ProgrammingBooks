@@ -24,6 +24,7 @@ package _1967NumberOfStringsThatAppearAsSubstringsInWord;
 //Вывод: 3
 //Пояснение: Каждый из шаблонов встречается в качестве подстроки в слове «ab».
 public class Solution {
+    // time O(n)
     public int numOfStrings(String[] patterns, String word) {
         int count = 0;
         for (var str : patterns) {
