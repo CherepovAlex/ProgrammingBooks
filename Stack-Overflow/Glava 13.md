@@ -1,5 +1,9 @@
 # Глава 13. Класс StringBuilder
 
+[Раздел 13.1. Сравнение StringBuffer, StringBuilder, Formatter и StringJoiner](#раздел-131-сравнение-stringbuffer-stringbuilder-formatter-и-stringjoiner)
+
+[Раздел 13.2. Повторение строки n раз](#раздел-132-повторение-строки-n-раз)
+
 Класс Java `StringBuilder` используется для создания изменяемой (модифицируемой) строки. Класс `StringBuilder` аналогичен классу `StringBuffer`, за исключением того, что он несинхронизирован. Он доступен начиная с версии JDK 1.5.
 
 ## Раздел 13.1. Сравнение StringBuffer, StringBuilder, Formatter и StringJoiner
@@ -63,34 +67,33 @@ System.out.println(sj);
 
 ## Раздел 13.2. Повторение строки n раз
 
+Задача: Создать строку, содержащую `n` повторений строки `s`. Тривиальный подход заключается в многократном повторении конкатенации строки `s`.
 
+```java
+final int n = ...
+final String s = ...
+String result = "";
+
+for (int i = 0; i < n; i++) {
+    result += s;
+}
+```
+
+При этом создаётся `n` новых экземпляров строк, содержащих от 1 до `n` повторений строки `s`, что приводит к очень большому времени выполнения `O(s.length() * n^2) = O(s.length() * (1+2+...+(n-1)+n))`.
+
+Чтобы избежать этого, следует использовать класс `StringBuilder`, который позволяет создать строку за время `O(s.length() * n)`:
+
+```java
+final int n = ...
+final String s = ...
+
+StringBuilder builder = new StringBuilder();
+
+for (int i = 0; i < n; i++) {
+    builder.append(s);
+}
+
+String resul = builder.toString();
+```
 
 [к оглавлению Глава 13](#глава-13-класс-stringbuilder)
-
-[Раздел 13.1. Сравнение StringBuffer, StringBuilder, Formatter и StringJoiner](#раздел-131-сравнение-stringbuffer-stringbuilder-formatter-и-stringjoiner)
-
-[Раздел 13.2. Повторение строки n раз](#раздел-132-повторение-строки-n-раз)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
