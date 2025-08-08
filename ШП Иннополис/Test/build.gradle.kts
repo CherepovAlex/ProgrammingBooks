@@ -10,6 +10,7 @@ dependencies {
     // Пример добавления зависимостей (JUnit 5 для тестов)
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.0")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.0")
+    implementation("net.datafaker:datafaker:2.0.2")
 }
 
 // Настройка кодировки для компиляции и запуска
