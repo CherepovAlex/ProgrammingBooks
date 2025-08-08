@@ -39,7 +39,7 @@ object1 == object2 // false // Два экземпляра одного клас
 ```java
 class Foo
 {
-    public function someMethod(): void
+    public function someMethod()    //: void
     {
         // Что-нибудь сделать 
     }
@@ -55,11 +55,11 @@ object1.someMethod();
 ```java
 class Foo
 {
-    public function anObjectMethod(): void
+    public function anObjectMethod()    //: void
     {
         // ...
     }
-    public static function aStaticMethod(): void
+    public static function aStaticMethod()  //: void
     {
         // ...
     }
@@ -109,7 +109,7 @@ try {
 ```java
 class Foo
 {
-    public static function create(): Foo
+    public static function create() //: Foo
     {
         return new Foo();
     }
@@ -124,6 +124,138 @@ object2 = Foo.create();
 
 ## 1.2. СОСТОЯНИЕ
 
+Объект может хранить данные. Эти данные могут содержаться в _свойствах_. Свойства будут иметь _имя_ и _тип_; им можно присвоить значения в любой момент после создания объекта. Обычно свойства задаются в конструкторе.
+
+### Листинг 1.7. Объявление свойств и присвоение им значений
+
+```java
+class Foo
+{
+    private int someNumber;
+    private string someString;
+    
+    public function __construct()
+    {
+        this.someNumber = 10;
+        this.someString = 'Hello, world!';
+    }
+}
+object1 = Foo.create(); // После инициализации свойствам someNumber и someString будут присвоены значения 10 и Hello, world! соответственно
+```
+
+Данные, содержащиеся в объектах, также называют _состоянием объекта_. Если эти данные необходимо жестко закрепить, как в предыдущем листинге, лучше присвоить значение изначально или объявить для него константу.
+
+### Листинг 1.8. Объявление констант
+
+```java
+class Foo
+{
+    private const int someNumber = 10; // В языке программирования может быть другой синтаксис. Например, в Java вы увидите final
+    private someString = 'Hello, world!';
+}
+```
+
+С другой стороны, если значение свойства должно быть переменным, можно позволить клиенту передавать значение для аргумента конструктора. Добавляя параметр в конструктор, вы вынуждаете клиентов предоставлять значение при создании экземпляра класса.
+
+### Листинг 1.9. Добавление аргумента в конструктор
+
+```java
+class Foo
+{
+    private int someNumber;
+    public function __construct(int initialNumber)
+    {
+        this.someNumber = initialNumber; // Невозможно создать экземпляр Foo без предоставления значения для аргумента initialNumber
+    }
+}
+object1 = new Foo(); // не работает
+object2 = new Foo(20);  // Должно сработать, здесь новому экземпляру класса Foo присваивается начальное значение 20
+```
+
+Если присвоить свойствам `someNumber` и `someString `модификатор `private`, они станут доступными только внутри экземпляров класса `Foo`. Это называется инкапсуляцией. Существуют и другие модификаторы для свойств: `protected` (см..раздел.1.5) и `public`. Присваивая свойству модификатор `public`, вы предоставляете любому клиенту доступ к нему.
+
+### Листинг 1.10. Объявление свойства с модификатором public
+
+```java
+class Foo
+{
+    public const int someNumber;
+    public string someString;
+    // ...
+}
+object1 = new Foo();
+number = object1.someNumber; // Так как свойство someNumber задано как константа, его значение менять нельзя, но хотя бы можно получить
+object2.someString = 'Cliche'; // someString не константа, но это свойство задано c модификатором public, поэтому здесь можно менять его значение
+```
+
+**МОДИФИКАТОРОМ ПО УМОЛЧАНИЮ ДЛЯ СВОЙСТВ ДОЛЖЕН БЫТЬ PRIVATE** 
+В общем случае предпочтительно использовать модификатор `private`. Ограничение доступа к данным объекта помогает скрывать детали его реализации. Так можно гарантировать, что клиентам не придется полагаться на специфичные данные объекта и они будут общаться с объектом через объявленные публичные методы (подробнее о методах см. в разделе 1.3). Мы разберем эту тему подробнее в следующих главах, например в разделах 6.3 и 9.8.
+
+Инкапсуляция свойств (а также методов, см. раздел 1.3) основана на классах. Это означает, что если свойство имеет модификатор `private`, то к этому свойству имеют доступ все экземпляры класса, включая тот экземпляр, которому оно присвоено.
+
+### Листинг 1.11. Обращение к свойству `private` другого экземпляра
+
+```java
+class Foo
+{
+    private int someNumber;
+    // ...
+    public function getSomeNumber() //: int
+    {
+        return this.someNumber; // Foo, конечно же, имеет доступ к собственному свойству someNumber
+    }
+    public function getSomeNumberFrom(Foo other)    //: int
+    {
+        return other.someNumber;    // Foo также имеет доступ к свойству someNumber других экземпляров Foo
+    }
+}
+object1 = new Foo();
+object2 = new Foo();
+object2.getSomeNumberFrom(object1); // Здесь вернется значение свойства someNumber
+```
+
+Объект называется _изменяемым_, когда значение свойства объекта может меняться в течение всего времени существования объекта. Если свойства объекта не могут меняться после инициализации, то объект считается _неизменяемым_. Листинг ниже иллюстрирует оба случая.
+
+### Листинг 1.12. Изменяемые и неизменяемые объекты
+
+```java
+class Mutable
+{
+    private int someNumber;
+    public function __construct(int initialNumber)
+    {
+        this.someNumber = initialNumber;
+    }
+    public function increase()  //: void
+    {
+        this.someNumber = this.someNumber + 1;
+    }
+}
+class Immutable
+{
+    private int someNumber;
+    public function __construct(int initialNumber)
+    {
+        this.someNumber = initialNumber;
+    }
+    public function increase()  //: Immutable
+    {
+        return new Immutable(someNumber + 1);
+    }
+}
+object1 = new Mutable(10);
+object1.increase(); // Вызов increase() у Mutable изменит состояние объекта, модифицируя значение свойства someNumber
+
+object2 = new Immutable(10);
+object2 = object2.increase(); // Вызов increase() у immutable не изменит состояния object2. Вместо этого мы получим новый экземпляр с увеличенным значением someNumb
+```
+
+В разделе 4.4 мы подробнее рассмотрим изменяемые объекты и узнаем, как делать их неизменяемыми.
+
+[оглавление Главы 1](#глава-1-программирование-объектов-введение)
+
+## 1.3. ПОВЕДЕНИЕ
+
 
 
 [оглавление Главы 1](#глава-1-программирование-объектов-введение)
@@ -132,3 +264,4 @@ object2 = Foo.create();
 
 [1.2. СОСТОЯНИЕ](#12-состояние)
 
+[1.3. ПОВЕДЕНИЕ](#13-поведение)
