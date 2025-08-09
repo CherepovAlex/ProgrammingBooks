@@ -36,9 +36,11 @@ public class UtilToSqlConversion {
 
 Вывод:
 
-`java.util.Date is : Fri Jul 22 14:40:35 IST 2016
+```bash
+java.util.Date is : Fri Jul 22 14:40:35 IST 2016
 java.sql.Date is : 2016-07-22
-dateFormated date is : 22/07/2016 - 02:40:35`
+dateFormated date is : 22/07/2016 - 02:40:35
+```
 
 Класс `java.util.Date` содержит информацию о дате и времени, в то время как класс `java.sql.Date` содержит только информацию о дате.
 
