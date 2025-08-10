@@ -166,6 +166,33 @@ Date d = c.getTime();
 
 ## Раздел 16.5. Преобразование даты в определённый формат строки
 
+Метод `format()` из класса `SimpleDateFormat` позволяет преобразовать объект `Date` в объект `String`, формат которого определяется задаваемой строкой-шаблоном.
+
+```java
+Date today = new Date();
+
+SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MMM-yy");
+// Здесь указывается шаблон
+System.out.println(dateFormat.format(today));   // 25-Feb-16
+```
+
+Строки-шаблоны могут быть применены повторно с помощью функции applyPattern()
+
+```java
+dateFormat.applyPatten("dd-MM-yyy");
+System.out.println(dateFormat.format(today));   // 25-02-2016
+
+dateFormat.applyPattern("dd-MM-yyyy HH:mm:ss E");
+System.out.println(dateFormat.format(today));   // 25-02-2016 06:14:33 Thu
+```
+
+_Примечание:_ здесь `mm` (маленькие буквы 'm') обозначают минуты, а `MM` (большие буквы `M`) - месяц. Будьте внимательные при форматировании года: прописная буква "Y" (`Y`) обозначает "неделю в году", а строчная "y" - год.
+
+
+[к оглавлению Глава 16](#глава-16-класс-date)
+
+## Раздел 16.6. LocalTime
+
 
 
 [к оглавлению Глава 16](#глава-16-класс-date)
@@ -180,7 +207,7 @@ Date d = c.getTime();
 
 [Раздел 16.5. Преобразование даты в определённый формат строки](#раздел-165-преобразование-даты-в-определённый-формат-строки)
 
-
+[Раздел 16.6. LocalTime](#раздел-166-localtime)
 
 
 
