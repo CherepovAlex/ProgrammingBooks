@@ -285,6 +285,103 @@ System.out.println(myBirthDatenTime);   // Mon Dec 31 08:32:35 IST 1990
 
 ## Раздел 16.9. Сравнение объектов Date
 
+**Calendar, Date, and LocalDate**
+
+_Версия < Java SE 8_
+
+**Методы before, after, compareTo и equals**
+
+```java
+// Использование объектов Calendar и Date
+final Date today = new Date();
+final Calendar сalendar = Calendar.getInstance();
+calendar.set(1990, Calendar.NOVEMBER, 1, 0, 0, 0);
+Date birthdate = calendar.getTime();
+
+final Calendar calendar2 = Calendar.getInstance();
+calendar2.set(1990, Calendar.NOVEMBER, 1, 0, 0, 0);
+Date samebirthdate = calendar2.getTime();
+
+// Пример с методом before
+System.out.printf("Is %1$tF before %2tF? %3$b%n", today, birthdate,
+Boolean.valueOf(today.before(birthdate)));
+System.out.printf("Is %1$tF before %1tF? %3$b%n", today, today,
+Boolean.valueOf(today.before(today)));
+System.out.printf("Is %2$tF before %1tF? %3$b%n", today, birthdate,
+Boolean.valueOf(birthdate.before(today)));
+
+// Пример с методом after
+System.out.printf("Is %1$tF after %2tF? %3$b%n", today, birthdate,
+Boolean.valueOf(today.after(birthdate)));
+System.out.printf("Is %1$tF after %1tF? %3$b%n", today, today,
+Boolean.valueOf(today.after(today)));
+System.out.printf("Is %1$tF after %1tF? %3$b%n", today, birthdate,
+Boolean.valueOf(birthdate.after(today)));
+
+// Пример сравнения двух дат
+System.out.printf("Compare %1$tF after %2tF? %3$b%n", today, birthdate,
+Boolean.valueOf(today.compareTo(birthdate)));
+System.out.printf("Compare %1$tF after %1tF? %3$b%n", today, today,
+Boolean.valueOf(today.compareTo(today)));
+System.out.printf("Compare %2$tF after %2tF? %3$b%n", today, birthdate,
+Boolean.valueOf(birthdate.compareTo(today)));
+
+// Пример проверки на равенство двух дат
+System.out.printf("Is %1$tF equal to %2tF? %3$b%n", today, birthdate,
+Boolean.valueOf(today.equals(birthdate)));
+System.out.printf("Is %1$tF equal to %2tF? %3$b%n", birthdate, samebirthdate,
+Boolean.valueOf(birthdate.equals(samebirthdate)));
+System.out.printf("Because birthdate.getTime() -> %1$d is different from samebirthdate.gettime() -> %2$d, there are milliseconds!%n",
+        Long.valueOf(birthdate.getTime()), Long.valueOf(samebirthdate.getTime()));
+
+// Сброс полей, содержащих мс в объектах Calendar
+calendar.clear(Calendar.MILLISECOND);
+calendar2.clear(Calendar.MILLISECOND);
+birthdate = calendar.getTime();
+samebirthdate = calendar2.getTime();
+
+System.out.printf("Is %1$tF equal to %2tF after clearing ms? %3$b%n", birthdate, samebirthdate,
+Boolean.valueOf(birthdate.equals(samebirthdate)));
+```
+
+_Версия >= Java SE 8_
+
+**Методы before, after, compareTo и equals**
+
+```java
+// Использование класса LocalDate
+final LocalDate now = LocalDate.now();
+final LocalDate birthdate2 = LocalDate.of(2012, 6, 30);
+final LocalDate birthdate3 = LocalDate.of(2012, 6, 30);
+
+// Часы, минуты, секунды и наносекунды могут быть также сконфигурированы с помощью
+// другого класса LocalDateTime
+// LocalDateTime.of(year, month, dayOfMonth, hour, minute, second, nanoOfSecond);
+
+// Пример с методом isBefore
+System.out.printf("Is %1$tF before %2$tF? %3$b%n", now, birthdate2, Boolean.valueOf(now.isBefore(birthdate2)));
+System.out.printf("Is %1$tF before %1$tF? %3$b%n", now, birthdate2, Boolean.valueOf(now.isBefore(now)));
+System.out.printf("Is %2$tF before %1$tF? %3$b%n", now, birthdate2, Boolean.valueOf(birthdate2.isBefore(now)));
+
+// Пример с методом isAfter
+System.out.printf("Is %1$tF after %2$tF? %3$b%n", now, birthdate2, Boolean.valueOf(now.isAfter(birthdate2)));
+System.out.printf("Is %1$tF after %1$tF? %3$b%n", now, birthdate2, Boolean.valueOf(now.isAfter(now)));
+System.out.printf("Is %2$tF after %1$tF? %3$b%n", now, birthdate2, Boolean.valueOf(birthdate2.isAfter(now)));
+
+// Пример с методом compareTo
+System.out.printf("Compare %1$tF to %2$tF? %3$b%n", now, birthdate2, Boolean.valueOf(now.compareTo(birthdate2)));
+System.out.printf("Compare %1$tF to %1$tF? %3$b%n", now, birthdate2, Boolean.valueOf(now.compareTo(now)));
+System.out.printf("Compare %2$tF to %1$tF? %3$b%n", now, birthdate2, Boolean.valueOf(birthdate2.compareTo(now)));
+
+// Пример с методом equals
+System.out.printf("Is %1$tF equal %2$tF? %3$b%n", now, birthdate2, Boolean.valueOf(now.equals(birthdate2)));
+System.out.printf("Is %1$tF equal %2$tF? %3$b%n", birthdate2, birthdate3, Boolean.valueOf(birthdate2.equals(birthdate3)));
+
+// Пример с методом isEqual
+System.out.printf("Is %1$tF equal %2$tF? %3$b%n", now, birthdate2, Boolean.valueOf(now.isEqual(birthdate2)));
+System.out.printf("Is %1$tF equal %1$tF? %3$b%n", birthdate2, birthdate3, Boolean.valueOf(birthdate2.isEqual(birthdate3)));
+```
+
 
 
 [к оглавлению Глава 16](#глава-16-класс-date)

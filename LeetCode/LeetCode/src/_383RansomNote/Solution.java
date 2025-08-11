@@ -13,6 +13,7 @@ package _383RansomNote;
 //Вывод: true
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class Solution {
 
@@ -20,22 +21,18 @@ public class Solution {
         // использует O(n) space
         //        for(char r: ransomNote.toCharArray()){
         //        }
-
         // time O(n*m), space O(m), n - длина ransomNote, m - длина magazine
         // Неэффективность из-за создания новых строк при каждом "удалении" символа
         for (int i = 0; i < ransomNote.length(); i++) {
             char r = ransomNote.charAt(i);
-
             // version 1
             // Ищем индекс первого вхождения r в magazine
             int matchingIndex = magazine.indexOf(r);
-
             if (matchingIndex == -1) {  // Если символ не найден (matchingIndex == -1), возвращаем false
                 return false;
             }
             // "Удаляем" найденный символ из magazine, создавая новую строку без этого символа
             magazine = magazine.substring(0, matchingIndex) + magazine.substring(matchingIndex + 1);
-
             // version 2
             // Аналогична version 1, но поиск реализован вручную через цикл (менее эффективно, чем indexOf).
 //            int matchingIndex1 = -1;
@@ -58,7 +55,6 @@ public class Solution {
         // Считаем частоту символов в magazine
         for (int i = 0; i < magazine.length(); i++) {
             char m = magazine.charAt(i);
-
             int currentCount = magazineLetters.getOrDefault(m, 0);
             magazineLetters.put(m, currentCount + 1);
         }
@@ -72,8 +68,32 @@ public class Solution {
             }
             magazineLetters.put(r, currentCount - 1);   // Уменьшаем счетчик символа в HashMap
         }
-
         return true;    // Если все символы ransomNote успешно проверены - возвращаем true
+    }
+    // time O(n), space O(n)
+    public boolean canConstruct3(String ransomNote, String magazine) {
+        Map<Character, Integer> map = new HashMap<>();
+        for (int i = 0; i < magazine.length(); i++) {
+            if (map.containsKey(magazine.charAt(i))) {
+                map.put(magazine.charAt(i), map.get(magazine.charAt(i)) + 1);
+            } else {
+                map.put(magazine.charAt(i), 1);
+            }
+        }
+        int count = 0;
+        for (int i = 0; i < ransomNote.length(); i++) {
+            if (map.containsKey(ransomNote.charAt(i))) {
+                char ch = ransomNote.charAt(i);
+                if (map.containsKey(ch) && map.get(ch) > 0) {
+                    count++;
+                    map.put(ch, map.get(ch) - 1);
+                } else return false;
+            }
+        }
+        if (count == ransomNote.length()) {
+            return true;
+        }
+        return false;
     }
 
     public static void main(String[] args) {

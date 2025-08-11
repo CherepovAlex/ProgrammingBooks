@@ -2,7 +2,6 @@ package _234PalindromeLinkedList;
 
 import java.util.ArrayList;
 import java.util.List;
-
 // Для head односвязного списка верните true, если это палиндром, или false иначе.
 // Example 1:
 //Input: head = [1,2,2,1]
