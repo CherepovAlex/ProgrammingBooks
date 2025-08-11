@@ -257,6 +257,34 @@ public static Date parseDate(String formattedDate, String dateFormat) {
 
 ## Раздел 16.8. Создание объектов Date
 
+```java
+Date date = new Date();
+System.out.println(date);   // Thu Feb 25 05:03:59 IST 2016
+```
+
+Здесь объект `Date` содержит текущие дату и время на момент создания данного объекта.
+
+```java
+Calendar calendar = Calendar.getInstance();
+calendar.set(90, Calendar.DECEMBER, 11);
+Date myBirthDate = calendar.getTime();
+System.out.println(myBirthDate);    // Mon Dec 31 00:00:00 IST 1990
+```
+
+Объекты `Date` лучше всего создавать через экземпляр `Calendar`, поскольку использование конструкторов класса `Date` устарело и в настоящее время не рекомендуется к использованию. Для этого нам необходимо создать экземпляр класса `Calendar` с помощью конструктора, не содержащего параметров. Затем при помощи метода `set` можно задать год, месяц и день месяца, используя численные значение или в случае задания месяцев константы, предоставляемые классом `Calendar` для улучшения читаемости кода и уменьшения количества ошибок.
+
+```java
+calendar.set(90, Calendar.DECEMBER, 11, 8, 32, 35);
+Date myBirthDatenTime = calendar.getTime();
+System.out.println(myBirthDatenTime);   // Mon Dec 31 08:32:35 IST 1990
+```
+
+Наряду с датой мы также можем задать время в следующем порядке - часы, минуты и секунды.
+
+[к оглавлению Глава 16](#глава-16-класс-date)
+
+## Раздел 16.9. Сравнение объектов Date
+
 
 
 [к оглавлению Глава 16](#глава-16-класс-date)
@@ -277,7 +305,7 @@ public static Date parseDate(String formattedDate, String dateFormat) {
 
 [Раздел 16.8. Создание объектов Date](#раздел-168-создание-объектов-date)
 
-
+[Раздел 16.9. Сравнение объектов Date](#раздел-169-сравнение-объектов-date)
 
 
 
