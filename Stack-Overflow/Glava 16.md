@@ -303,34 +303,23 @@ calendar2.set(1990, Calendar.NOVEMBER, 1, 0, 0, 0);
 Date samebirthdate = calendar2.getTime();
 
 // Пример с методом before
-System.out.printf("Is %1$tF before %2tF? %3$b%n", today, birthdate,
-Boolean.valueOf(today.before(birthdate)));
-System.out.printf("Is %1$tF before %1tF? %3$b%n", today, today,
-Boolean.valueOf(today.before(today)));
-System.out.printf("Is %2$tF before %1tF? %3$b%n", today, birthdate,
-Boolean.valueOf(birthdate.before(today)));
+System.out.printf("Is %1$tF before %2tF? %3$b%n", today, birthdate, Boolean.valueOf(today.before(birthdate)));
+System.out.printf("Is %1$tF before %1tF? %3$b%n", today, today, Boolean.valueOf(today.before(today)));
+System.out.printf("Is %2$tF before %1tF? %3$b%n", today, birthdate, Boolean.valueOf(birthdate.before(today)));
 
 // Пример с методом after
-System.out.printf("Is %1$tF after %2tF? %3$b%n", today, birthdate,
-Boolean.valueOf(today.after(birthdate)));
-System.out.printf("Is %1$tF after %1tF? %3$b%n", today, today,
-Boolean.valueOf(today.after(today)));
-System.out.printf("Is %1$tF after %1tF? %3$b%n", today, birthdate,
-Boolean.valueOf(birthdate.after(today)));
+System.out.printf("Is %1$tF after %2tF? %3$b%n", today, birthdate, Boolean.valueOf(today.after(birthdate)));
+System.out.printf("Is %1$tF after %1tF? %3$b%n", today, today, Boolean.valueOf(today.after(today)));
+System.out.printf("Is %1$tF after %1tF? %3$b%n", today, birthdate, Boolean.valueOf(birthdate.after(today)));
 
 // Пример сравнения двух дат
-System.out.printf("Compare %1$tF after %2tF? %3$b%n", today, birthdate,
-Boolean.valueOf(today.compareTo(birthdate)));
-System.out.printf("Compare %1$tF after %1tF? %3$b%n", today, today,
-Boolean.valueOf(today.compareTo(today)));
-System.out.printf("Compare %2$tF after %2tF? %3$b%n", today, birthdate,
-Boolean.valueOf(birthdate.compareTo(today)));
+System.out.printf("Compare %1$tF after %2tF? %3$b%n", today, birthdate, Boolean.valueOf(today.compareTo(birthdate)));
+System.out.printf("Compare %1$tF after %1tF? %3$b%n", today, today, Boolean.valueOf(today.compareTo(today)));
+System.out.printf("Compare %2$tF after %2tF? %3$b%n", today, birthdate, Boolean.valueOf(birthdate.compareTo(today)));
 
 // Пример проверки на равенство двух дат
-System.out.printf("Is %1$tF equal to %2tF? %3$b%n", today, birthdate,
-Boolean.valueOf(today.equals(birthdate)));
-System.out.printf("Is %1$tF equal to %2tF? %3$b%n", birthdate, samebirthdate,
-Boolean.valueOf(birthdate.equals(samebirthdate)));
+System.out.printf("Is %1$tF equal to %2tF? %3$b%n", today, birthdate, Boolean.valueOf(today.equals(birthdate)));
+System.out.printf("Is %1$tF equal to %2tF? %3$b%n", birthdate, samebirthdate, Boolean.valueOf(birthdate.equals(samebirthdate)));
 System.out.printf("Because birthdate.getTime() -> %1$d is different from samebirthdate.gettime() -> %2$d, there are milliseconds!%n",
         Long.valueOf(birthdate.getTime()), Long.valueOf(samebirthdate.getTime()));
 
@@ -381,6 +370,68 @@ System.out.printf("Is %1$tF equal %2$tF? %3$b%n", birthdate2, birthdate3, Boolea
 System.out.printf("Is %1$tF equal %2$tF? %3$b%n", now, birthdate2, Boolean.valueOf(now.isEqual(birthdate2)));
 System.out.printf("Is %1$tF equal %1$tF? %3$b%n", birthdate2, birthdate3, Boolean.valueOf(birthdate2.isEqual(birthdate3)));
 ```
+
+**Сравнение дат до появления версии Java 8**
+
+До появления версии Java 8 для сравнения дат использовались классы `java.util.Calendar` и `java.util.Date`. Класс `Date` предлагает 4 метода для сравнения дат:
+
++ `after(Date when)`
++ `before(Date when)`
++ `compareTo(Date anotherDate)`
++ `equals(Object obj)`
+
+Методы `after, before, compareTo` и `equals` для каждой даты сравнивают значения, возвращаемые методом `getTime()`.
+
+Метод `compareTo` возвращает целое положительное число.
+
++ Возвращаемое значение больше 0: если текущая дата следует за датой, указанной в качестве аргумента.
++ Возвращаемое значение меньше 0: если текущая дата предшествует дате, указанной в качестве аргумента.
++ Возвращаемое значение равно 0: если текущая дата совпадает с датой, указанной в качестве аргумента.
+
+Как показано в примере, результаты могут быть неожиданными, поскольку такие величины, как миллисекунды, не инициализируются один и тем же значением, если оно не задано явно.
+
+**Начиная с Java 8**
+
+В Java 8 появился новый объект для работы с датой. Это класс `java.time.LocalDate`. Класс `LocalDate` реализует класс `ChronoLocalDate`, абстрактное представление даты, к которому можно подключить класс `Chronology`, или систему календарей.
+
+Для точного определения даты и времени необходимо использовать объект `java.time.LocalDateTime`. `LocalDate` и `LocalDateTime` используют для метода сравнения одно и то же имя.
+
+Сравнение дат с помощью методов класса `LocalDate` отличается от сравнения с помощью методов класса `ChronoLocalDate` тем, что в первом случае не учитывается хронология, или календарная система.
+
+Поскольку в большинстве приложений более предпочтительно использовать класс `LocalDate`, здесь не приводятся примеры использования класса `ChronoLocalDate`. Дополнительная информация о классе `ChronoLocalDate` приведена по адресу (http://docs.oracle.com/javase/8/docs/api/java/time/chrono/ChronoLocalDate.html).
+
+В большинстве приложений сигнатуры методов, поля и переменные должны объявляться как `LocalDate`, а не как интерфейс `[ChronoLocalDate]`.
+
+Класс `LocalDate` содержит 5 методов для сравнения дат:
+
++ `iaAfter(ChronoLocalDate other)`
++ `isBefore(ChronoLocalDate other)`
++ `isEqual(ChronoLocalDate other)`
++ `compareTo(ChronoLocalDate other)`
++ `equals(Object obj`
+
+В случае вызова этих методов с параметрами `LocalDate` методы `isAfter, isBefore, isEqual, equals` и `compareTo` теперь используется следующий метод:
+
+```java
+int compareTo0(LocalDate otherDate) {
+    int cmp = (year - otherDate.year);
+    if (cmp == 0) {
+        cmp = (month - otherDate.month);
+        if (cmp == 0) {
+            cmp = (day - otherDate.day);
+        }
+    }
+    return cmp;
+}
+```
+
+Метод `equals` первым делом проверяет, равна ли ссылка на параметр ссылке на дату, в то время как метод `isEqual` напрямую вызывает метод `compareTo`.
+
+В случае, если параметром методов является экземпляр класса `ChronoLocalDate`, даты сравниваются на основе свойства `Epoch Day`. Свойство `Epoch Day` представляет собой просто инкрементирующий счетчик дней, где день 0 соответствует дате 1970-01-01 (ISO).
+
+[к оглавлению Глава 16](#глава-16-класс-date)
+
+## Раздел 16.10. Преобразование строки в дату
 
 
 
