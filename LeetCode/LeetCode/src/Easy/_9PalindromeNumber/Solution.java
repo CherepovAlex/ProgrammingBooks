@@ -25,6 +25,7 @@ public class Solution {
         while (x > reversedHalf) {
             reversedHalf = reversedHalf * 10 + x % 10;
             x /= 10;
+            System.out.println(reversedHalf + " " + x);
         }
         // Для четного и нечетного количества цифр
         return x == reversedHalf || x == reversedHalf / 10;

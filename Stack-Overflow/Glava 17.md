@@ -52,6 +52,141 @@ OffsetDateTime parsed = OffsetDateTime.parse("2016-07-27T07:00:00+02:00");
 
 ## Раздел 17.3. Операции со значениями даты и времени
 
+```java
+LocalDate tomorrow = LocalDate.now().plusDays(1);
+LocalDateTime anHourFromNow = LocalDateTime.now().plusHours(1);
+Long daysBetween = java.time.temporal.Chronounit.DAYS.between(LocalDate.now(), LocalDate.now().plusDays(3));    // 3
+Duration duration = Duration.between(Instant.now(), ZonedDateTime.parse("2016-07-27T07:00:00+01:00[Europe/Stockholm]"));
+```
+
+[к оглавлению Глава 17](#глава-17-библиотека-для-работы-с-датой-и-временем-javatime)
+
+## Раздел 17.4. Класс Instant
+
+Представляет собой определённый момент во времени. Можно рассматривать как класс-обёртку для временной метки в формате ОС Unix.
+
+```java
+Instant now = Instant.now();
+Instant epoch1 = Instant.ofEpochMilli(0);
+Instant epoch2 = Instant.parse("1970-01-01T00:00:00Z");
+java.time.temporal.ChronoUnit.MICROS.betweet(epoch1, epoch2);   // 0
+```
+
+[к оглавлению Глава 17](#глава-17-библиотека-для-работы-с-датой-и-временем-javatime)
+
+## Раздел 17.5. Использование различных классов для работы с Date Time API 
+ 
+Следующие примеры содержат пояснения, необходимые для понимания их работы.
+
+```java
+import java.time.Clock;
+import java.time.Duration;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.util.TimeZone;
+
+public class SomeMethodsExamples {
+
+/**
+ * Содержит методы класса {@link LocalDateTime}
+  */
+public static void checkLocalDateTime() {
+    LocalDateTime localDateTime = LocalDateTime.now();
+    System.out.println("Local Date time using static now() method ::: >>> " + localDateTime);
+
+    LocalDateTime ldt1 = LocalDateTime.now(ZoneId.of(ZoneId.SHORT_IDS.get("AET")));
+    System.out.println("LOCAL TIME USING now(ZoneId zoneId) method ::: >>> " + ldt1);
+
+    LocalDateTime ldt2 = LocalDateTime.now(Clock.system(ZoneId.of(ZoneId.SHORT_IDS.get("PST"))));
+    System.out.println("LOCAL TIME USING now(Clock.system(ZoneId.of())) ::: >>> " + ldt2);
+
+    System.out.println("now() is overridden to take ZoneId as parameter using this we can get the same date under different timezones.");
+    System.out.println(ZoneId.SHORT_IDS);
+
+}
+
+/**
+ * Содержит методы класса {@link LocalDate}
+  */
+public static void checkLocalDate() {
+    LocalDate localDate = LocalDate.now();
+    System.out.println("Получает дату без времени с помощью метода now(). >> " + localDate);
+    LocalDate localDate2 = LocalDate.now(ZoneId.of(ZoneId.SHORT_IDS.get("ECT")));
+    System.out.println("now() переопределена для принятия ZoneID в качестве параметра, используя это, мы можем получить одну и ту же дату в разных часовых поясах. >> " + localDate2);
+    }
+
+/**
+ * Содержит методы абстрактного класса {@link Clock}. Класс Clock может быть
+ * использован для получения времени с учетом временных зон {@link TimeZone}.
+  */
+public static void checkClock() {
+    Clock clock = Clock.systemUTC();
+    // Отражает время в соответствии с ISO 8601
+    System.out.println("Время, полученное при использовании класса Clock : " + clock.instant());
+}
+
+/**
+ * Содержит методы класса {@link Instant}* 
+ */
+public static void checkInstant() {
+    Instant instant = Instant.now();
+    
+    System.out.println("Класс Instant, использующий метод now() :: " + instant);
+    
+    Instant ins1 = Instant.now(Clock.systemUTC());
+    
+    System.out.println("Класс Instant, использующий метод now(Clock clock) :: " + ins1);
+}
+
+/**
+ * Этот класс проверяет работу методов класса {@link Duration}
+ */
+public static void checkDuration() {
+    // toString() преобразует длительность в формат PTnHnMnS в соответствии
+    // со стандартом ISO 8601. Если поле равно нулю, то оно игнорируется.
+    
+    // P - обозначение длительности (исторически называемое "периодом"), расположено
+    // в начале строки представления длительности
+    // Y - обозначение года, которое помещается после числового значение количества лет
+    // M - обозначение месяца, которое помещается после числового значения количества месяцев
+    // W - обозначение недели, которое помещается после числового значения количества недель
+    // D - обозначение дней, которое помещается после числового значения количества дней
+    // T - обозначение времени, расположено в начале строки представления времени
+    // H - обозначение часа, которое помещается после числового значения количества часов
+    // M - обозначение минут, которое помещается после числового значения количества минут
+    // S - обозначение секунд, которое помещается после числового значения количества секунд
+    
+    System.out.println(Duration.ofDays(2));
+}
+
+/**
+ * Выводит время без дат. Этот метод не сохраняет время и не выводит дату совместно
+ * с временем. Вместо этого он представляет время в виде, подобно тому, как отображают
+ * время электронные часы на стене
+ */
+public static void checkLocalTime() {
+    LocalTime localTime = LocalTime.now();
+    System.out.println("LocalTime :: " + localTime);
+}
+
+/**
+ * Выводит дату и время с указанием часового пояса в стандарте ISO-8601
+ */
+public static void checkZoneDateTime() {
+    ZonedDateTime zonedDateTime = ZonedDateTime.now(ZoneId.of(ZoneId.SHORT_IDS.get("CST")));
+    System.out.println(zonedDateTime);
+}
+}
+```
+
+[к оглавлению Глава 17](#глава-17-библиотека-для-работы-с-датой-и-временем-javatime)
+
+## Раздел 17.6. Форматирование даты и времени
+
 
 
 [к оглавлению Глава 17](#глава-17-библиотека-для-работы-с-датой-и-временем-javatime)
@@ -62,11 +197,11 @@ OffsetDateTime parsed = OffsetDateTime.parse("2016-07-27T07:00:00+02:00");
 
 [Раздел 17.3. Операции со значениями даты и времени](#раздел-173-операции-со-значениями-даты-и-времени)
 
+[Раздел 17.4. Класс Instant](#раздел-174-класс-instant)
 
+[Раздел 17.5. Использование различных классов для работы с Date Time API ](#раздел-175-использование-различных-классов-для-работы-с-date-time-api-)
 
-
-
-
+[Раздел 17.6. Форматирование даты и времени](#раздел-176-форматирование-даты-и-времени)
 
 
 
