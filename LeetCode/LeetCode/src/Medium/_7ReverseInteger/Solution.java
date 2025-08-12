@@ -15,6 +15,7 @@ package Medium._7ReverseInteger;
 //Output: 21
 public class Solution {
     // version 1
+    // O(Log(X))
     public int reverse(int x) {
         int reversed = 0;   // Инициализация переменной для хранения результата
         while (x != 0) {
