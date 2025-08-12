@@ -498,8 +498,10 @@ System.out.println(sdf.format(date));
 ```
 Вывод:
 
-`Central European Time
+```bash
+Central European Time
 2016-07-21 22:50:56
-2016-07-21 21:50:56`
+2016-07-21 21:50:56
+```
 
 [к оглавлению Глава 16](#глава-16-класс-date)
