@@ -61,6 +61,49 @@ public class AmountOfTime {
 
 ## Раздел 18.2. Введение
 
+`LocalTime` - это неизменямый класс (т.е. класс, объекты которого не могут быть изменены после создания), безопасный для потоков, который используется для предоставления времени в формате "часы-минуты-секунды". Время представляется с точностью до наносекунды. Например, в экземпляре класса `LocalTime` может храниться значение "13:45.30.123456789".
+
+Этот класс не хранит и не представляет дату или часовой пояс. Вместо этого он представляет время в виде, подобном тому, как отображают время электронные часы на стене. Он не может представить момент времени на линии времени без дополнительной информации, такой как смещение или часовой пояс. Он основан на работе со значениями, а не ссылками, поэтому для сравнений следует использовать метод `equals`.
+
+**Поля**
+
+`MAX` - Максимально возможное время в `LocalTime`, `23:59:59.999999999`. `MIDNIGHT`, `MIN`, `MOON`.
+
+**Важные статические методы**
+
+`now(), now(Clock clock), now(ZoneId zone), parse(CharSequence text)`
+
+**Важные методы объекты**
+
+`isAfter(LocalTime other), isBefore(LocalTie other), minus(TemporalAmount amountToSubstract), minus(long amountToSubtract, TemporalUnit unit), plus(TemporalAmount amountToAdd), plus(long amountToAdd, TemporalUnit unit)`.
+
+```java
+ZoneId zone = ZoneId.of("Asia/Kolkata");
+LocalTime now = LocalTime.now();
+LocalTime now1 = LocalTime.now(zone);
+LocalTime then = LocalTime.parse("04:16:40");
+```
+
+Разница между двумя значениям времени может быть рассчитана одни из следующих способов
+
+```java
+long timeDiff = Duration.between(now, now1).toMinutes();
+long timeDiff1 = java.time.temporal.ChronoUnit.MINUTES.between(now2, now1);
+```
+
+Вы также можете добавлять/вычитать часы, минуты или секунды из любого объекта `LocalTime`.
+
+`minusHours(long hoursToSutrct), minusMinutes(long hoursToMinutes), minusNanos(longnanosToSubtract), minusSeconds(long secondsToSubtract), 
+plusHours(long hoursToSubtract), plusMinutes(long hoursToMinutes), plusNanos(long nanosToSubtract), plusSeconds(long secondsToSubtract)`
+
+```java
+now.plusHours(1L);
+now1.minusMinutes(20L);
+```
+
+[к оглавлению Глава 18](#глава-18-localtime)
+
+## Раздел 18.3. Изменение времени
 
 
 [к оглавлению Глава 18](#глава-18-localtime)
@@ -68,3 +111,5 @@ public class AmountOfTime {
 [Раздел 18.1. Количество времени между двумя значениями LocalTime](#раздел-181-количество-времени-между-двумя-значениями-localtime)
 
 [Раздел 18.2. Введение](#раздел-182-введение)
+
+[Раздел 18.3. Изменение времени](#раздел-183-изменение-времени)
