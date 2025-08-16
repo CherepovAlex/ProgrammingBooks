@@ -12,7 +12,9 @@
 
 ## Раздел 18.1. Количество времени между двумя значениями LocalTime
 
-Существует два эквивалентных способа вычисления количества единиц времени между двумя значениями `LocalTime`: 1) через методы `until(Temporal, TemporalUnit)` и 2) через метод `TemporalUnit.between(Temporal, Temporal)`.
+Существует два эквивалентных способа вычисления количества единиц времени между двумя значениями `LocalTime`: 
+1) через методы `until(Temporal, TemporalUnit)` и 
+2) через метод `TemporalUnit.between(Temporal, Temporal)`.
 
 ```java
 import java.time.LocalTime;
