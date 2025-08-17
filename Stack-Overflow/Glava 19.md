@@ -92,7 +92,174 @@ BigDecimal b = new BigDecimal(15.15); // Выдаст непредсказуем
 
 ## Раздел 19.4. Математические операции с большими числами (BigDecimal)
 
+В данном примере показано, как выполнять основные математические операции с использованием больших чисел (`BigDecimal`)
 
+**1. Сложение**
+
+```java
+BigDecimal a = new BigDecimal("5");
+BigDecimal b = new BigDecimal("7");
+
+// Эквивалентно result = a + b
+BigDecimal result = a.add(b);
+System.out.println(result);
+```
+
+    `Результат: 12`
+
+**2. Вычитание**
+
+```java
+BigDecimal a = new BigDecimal("5");
+BigDecimal b = new BigDecimal("7");
+
+// Эквивалентно result = a - b
+BigDecimal result = a.subtract(b);
+System.out.println(result);
+```
+
+    `Результат: -2`
+
+**3. Умножение**
+
+При умножении двух больших чисел (`BigDecimal`) результат будет иметь количество знаков после запятой, равное суммарному количеству знаков после запятой двух операндов.
+
+```java
+BigDecimal a = new BigDecimal("5.11");
+BigDecimal b = new BigDecimal("7.211");
+
+// Эквивалентно result = a * b
+BigDecimal result = a.multiply(b);
+System.out.println(result);
+```
+
+    `Результат: 36.89931`
+
+Для изменения у результата количества знаков после запятой используется перегруженный метод `multiply`, который позволяет передавать объект `MathContext`, устанавливающий правила работы операторов, в частности точность и режим округления результата. Более подробная информация о доступных режимах округления приведена в документации `Oracle`.
+
+```java
+BigDecimal a = new BigDecimal("5.11");
+BigDecimal b = new BigDecimal("7.211");
+
+MathContext returnRules = new MathContext(4, RoundingMode.HALF_DOWN);
+
+// Эквивалентно result = a * b
+BigDecimal result = a.multiply(b, returnRules);
+System.out.println(result);
+```
+
+    `Результат: 36.90`
+
+**4. Деление**
+
+Деление несколько сложнее других арифметических операций. Рассмотрим следующий пример:
+
+```java
+BigDecimal a = new BigDecimal("5");
+BigDecimal b = new BigDecimal("7");
+
+BigDecimal result = a.divide(b);
+System.out.println(result);
+```
+
+Мы ожидаем, что программа выведет на экран что-то похожее на: `0.7142857142857143`, но мы получим: 
+
+    `Результат: java.lang.ArithmeticException: Непрерывное десятичное расширение;
+     нет точного десятичного результата`.
+
+Приведённый способ прекрасно работает, если результат - конечное десятичное число, например, такой, который получится, если разделить 5 на 2, но для тех чисел, которые при делении не дают конечный результат, мы получим исключение `ArithmeticException`. В реальных условиях невозможно предсказать значения, которые будут встречаться при делении, поэтому для деления больших чисел (`BigDecimal`) необходимо указать масштаб (**scale**) (количество знаков после запятой) и режим округления (**Rounding Mode**). Более подробную информацию о режимах Scale и Rounding Mode можно найти в документации Oracle по адресу (http://docs.oracle.com/javase/7/docs/api/math/BigDecimal.html). Например:
+
+```java
+BigDecimal a = new BigDecimal("5");
+BigDecimal b = new BigDecimal("7");
+
+// Эквивалентно result = a / b (до 10 знаков после запятой и режим округления HALF_UP)
+BigDecimal result = a.divide(b, 10, RoundingMode.HALF_UP);
+System.out.println(result);
+```
+
+    `Результат: 0.7142857143`
+
+**5. Остаток или деление по модулю**
+
+```java
+BigDecimal a = new BigDecimal("5");
+BigDecimal b = new BigDecimal("7");
+
+// Эквивалентно result = a % b
+BigDecimal result = a.remainder(b);
+System.out.println(result);
+```
+
+    `Результат: 5`
+
+**6. Возведение в степень**
+
+```java
+BigDecimal a = new BigDecimal("5");
+
+// Эквивалентно result = a^10
+BigDecimal result = a.pow(10);
+System.out.println(result);
+```
+
+    `Результат: 9765625`
+
+**7. Определение максимального из двух чисел**
+
+```java
+BigDecimal a = new BigDecimal("5");
+BigDecimal b = new BigDecimal("7");
+
+// Эквивалентно result = MAX(a,b)
+BigDecimal result = a.max(b);
+System.out.println(result);
+```
+
+    `Результат: 7`
+
+**8. Определение минимального из двух чисел**
+
+```java
+BigDecimal a = new BigDecimal("5");
+BigDecimal b = new BigDecimal("7");
+
+// Эквивалентно result = MIN(a,b)
+BigDecimal result = a.min(b);
+System.out.println(result);
+```
+
+    `Результат: 5`
+
+**9. Переместить десятичную точку влево**
+
+```java
+BigDecimal a = new BigDecimal("5234.49843776");
+
+// Перемещение десятичной точки на 2 знака влево от текущей позиции
+BigDecimal result = a.movePointLeft(2);
+System.out.println(result);
+```
+
+    `Результат: 52.3449843776`
+
+**10. Переместить десятичную точку вправо**
+
+```java
+BigDecimal a = new BigDecimal("5234.49843776");
+
+// Перемещение десятичной точки на 3 знака вправо от текущей позиции
+BigDecimal result = a.movePointLeft(3);
+System.out.println(result);
+```
+
+    `Результат: 5234498.43776`
+
+Вариантов и комбинаций параметров для приведённых выше примеров выполнений операций гораздо больше (например, существует 6 вариаций метода деления `divide`). Приведённый набор является далеко неполным перечнем разновидностей операций с большими числами и охватывает только несколько основных базовых вариаций. 
+
+[к оглавлению Глава 19](#глава-19-класс-bigdecimal)
+
+## Раздел 19.5. Инициализация числа BigDecimals значениями ноль, один и девять
 
 [к оглавлению Глава 19](#глава-19-класс-bigdecimal)
 
