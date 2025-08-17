@@ -1,5 +1,13 @@
 # Глава 18. LocalTime
 
+[Раздел 18.1. Количество времени между двумя значениями LocalTime](#раздел-181-количество-времени-между-двумя-значениями-localtime)
+
+[Раздел 18.2. Введение](#раздел-182-введение)
+
+[Раздел 18.3. Изменение времени](#раздел-183-изменение-времени)
+
+[Раздел 18.4. Часовые пояса и разница во времени](#раздел-184-часовые-пояса-и-разница-во-времени)
+
 | **Метод**                      | **Возвращаемое значение**                                                                                                                       |
 |:-------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------|
 | LocalTime.of(13, 12, 11)       | 13:12:11                                                                                                                                        |
@@ -105,11 +113,43 @@ now1.minusMinutes(20L);
 
 ## Раздел 18.3. Изменение времени
 
+Можно добавлять часы, минуты, секунды и наносекунды:
+
+```java
+LocalTime time = LocalTime.now();
+LocalTime addHours = time.plusHours(5);         // Добавить 5 часов к текущему времени
+LocalTime addMinutes = time.plusMinutes(15);    // Добавить 15 минут к текущему времени
+LocalTime addSeconds = time.plusSeconds(30);    // Добавить 30 секунд к текущему времени
+LocalTime addNanoseconds = time.plusNanos(150_000_000); // Добавляем 150.000.000
+// наносекунд (150 мс) к текущему времени
+```
 
 [к оглавлению Глава 18](#глава-18-localtime)
 
-[Раздел 18.1. Количество времени между двумя значениями LocalTime](#раздел-181-количество-времени-между-двумя-значениями-localtime)
+## Раздел 18.4. Часовые пояса и разница во времени
 
-[Раздел 18.2. Введение](#раздел-182-введение)
+```java
+import java.time.LocalTime;
+import java.time.ZoneId;
+import java.time.temporal.ChronoUnit;
 
-[Раздел 18.3. Изменение времени](#раздел-183-изменение-времени)
+public class Test {
+    public static void main(String[] args) {
+        ZoneId zone1 = ZoneId.of("Europe/Berlin");
+        ZoneId zone2 = ZoneId.of("Brazil/East");
+        
+        LocalTime now = LocalTime.now();
+        LocalTime now1 = LocalTime.now(zone1);
+        LocalTime now2 = LocalTime.now(zone2);
+        
+        System.out.println("Текущее время : " + now);
+        System.out.println("Берлинское время : " + now1);
+        System.out.println("Бразильское время : " + now2);
+        
+        long minutesBetween = ChronoUnit.MINUTES.between(now2, now1);
+        System.out.println("разница между берлинским и бразильским временем : " + minutesBetween + "минут");
+    }
+}
+```
+
+[к оглавлению Глава 18](#глава-18-localtime)
