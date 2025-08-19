@@ -35,9 +35,9 @@ class Solution {
         if (head == null) {
             return head;
         }
-        ListNode odd = head;        // нечетный узел (первый) - голова
-        ListNode even = head.next;  // четный узел (второй) - следующий
-        ListNode evenHead = even;   // сохраняем голову четного списка
+        ListNode odd = head;        // нечетный узел (первый) - голова:  odd -> 1
+        ListNode even = head.next;  // четный узел (второй) - следующий: even -> 2
+        ListNode evenHead = even;   // сохраняем голову четного списка:  evenHead -> 2
 
         while (even != null && even.next != null) {
             // Обновляем указатель для нечетного списка

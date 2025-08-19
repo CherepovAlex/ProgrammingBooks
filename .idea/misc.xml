@@ -3,6 +3,7 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/Hexlet/BasicsAlgorithmsAndStructuresOfData" />
+    <file type="web" url="file://$PROJECT_DIR$/Hexlet/Masscoding/ArrayList_LinkedList" />
     <file type="web" url="file://$PROJECT_DIR$/Hexlet/Modul2/01-Java-Classes/isp1-Counter" />
     <file type="web" url="file://$PROJECT_DIR$/Hexlet/Modul2/01-Java-Classes/isp2-Triangle" />
     <file type="web" url="file://$PROJECT_DIR$/Hexlet/Modul2/01-Java-Classes/isp3-BankAccount" />
