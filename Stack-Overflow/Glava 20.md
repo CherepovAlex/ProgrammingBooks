@@ -46,6 +46,14 @@ BigInteger valueFromBytes = new BigInteger(bytes);
 
 В результате будет сгенерирован экземпляр `BigInteger` со значением 128, поскольку байт интерпретируются как беззнаковое число, а знак явно установлен в 1, что означает положительное число.
 
+```java
+byte[] unsignedBytes = new byte[] {(byte) 0x80 };
+int sign = 1;   // положительный
+BigInteger valueFromUnsignedBytes = new BigInteger(sign, unsignedBytes);
+```
+
+В результате будет сгенерирован экземпляр `BigInteger` со значением 128, поскольку байт интерпретируются как беззнаковое число, что означает положительное число.
+
 Для общих значений существуют предопределённые константы:
 + `BigInteger.ZERO` - значение "0".
 + `BigInteger.ONE` - значение "1".
