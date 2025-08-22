@@ -1,26 +1,31 @@
 package exercise.Vebinar16_25_08_20;
-
+// Эта программа выполняет цифровое преобразование содержимого текстового файла
+// Читает входной файл input.txt побайтово
+//Пропускает без изменений: пробелы (код 32) и переводы строк (код 10)
+//Преобразует все остальные символы: заменяет их на цифровое представление их ASCII-кода
+//Записывает результат в выходной файл output.txt
+//Пример: Символ 'A' (ASCII код 65) будет преобразован в строку "65"
 import java.io.*;
 
 public class Example12 {
 
     public static void main(String[] args) {
-
+        // Определение путей к входному и выходному файлам.
         String input = "C://input.txt";
         String output = "C://output.txt";
-
-        try (InputStream in = new FileInputStream(input);
-             OutputStream out = new FileOutputStream(output)) {
-
+        // Ресурсы автоматически закроются при выходе из блока try
+        try (InputStream in = new FileInputStream(input);        // открывает входной файл для чтения
+             OutputStream out = new FileOutputStream(output)) {  // открывает выходной файл для записи
+            // Объявление переменной для хранения прочитанного байта
             int oneByte = 0;
 
-            while ((oneByte = in.read()) >= 0) {
-                if (oneByte == 10 || oneByte == 32) {
-                    out.write(oneByte);
-                } else {
+            while ((oneByte = in.read()) >= 0) {    // читает один байт из файла, возвращает -1 при достижении конца файла
+                if (oneByte == 10 || oneByte == 32) { // Проверка: является ли байт пробелом (32) или переводом строки (10)
+                    out.write(oneByte);               // Если да - записывает байт без изменений в выходной файл.
+                } else {    // иначе преобразует числовое значение байта в строку. Например: 65 → "65"
                     String digits = String.valueOf(oneByte);
-                    for (int i = 0; i < digits.length(); i++) {
-                        out.write(digits.charAt(i));
+                    for (int i = 0; i < digits.length(); i++) { // Цикл по каждой цифре в полученной строке.
+                        out.write(digits.charAt(i));            // Записывает каждый символ цифры как отдельный байт в выходной файл.
                     }
                 }
             }
