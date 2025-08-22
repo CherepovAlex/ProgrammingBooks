@@ -1,21 +1,26 @@
 package exercise.Vebinar16_25_08_20;
-
+// чтение и вывод содержимого текстового файла в консоль
 import java.io.FileInputStream;
 import java.io.IOException;
-
+// Преобразование байта в char работает корректно только для текстовых файлов в соответствующей кодировке
 public class Example6 {
-
+                                                // класс исключений для обработки ошибок ввода-вывода
     public static void main(String[] args) throws IOException {
-
+        // Указывает путь к файлу input.txt на диске C
         String path = "C:\\input.txt";
-
+        // Создает поток для чтения данных из этого файла - класс для чтения байтов из файла
+        // что может быть неэффективно для больших файлов
         FileInputStream fileStream = new FileInputStream(path);
-
+        // Последовательно читает файл по одному байту за раз
         int oneByte = fileStream.read();
-
-        while (oneByte >= 0) {
-            System.out.print((char) oneByte);
-            oneByte = fileStream.read();
+        // Завершает работу, когда достигает конца файла
+        while (oneByte >= 0) {  // -1 означает конец файла (EOF - End Of File)
+            System.out.print((char) oneByte); // Преобразует каждый прочитанный байт в символ
+            oneByte = fileStream.read();    // Читает следующий байт из файла, обновляет значение
         }
     }
+    // Программа не закрывает файловый поток явно, что является недостатком
+    // (в реальных приложениях нужно использовать try-with-resources)
+
+    //  Исключения просто пробрасываются наружу, что приведет к аварийному завершению при ошибках чтения файла
 }
