@@ -1,4 +1,4 @@
-package exercise.Vebinar14.logger.impl.files;
+package exercise.Vebinar14_25_08_13.logger.impl.files;
 
 public class TxtFileLogger extends FileLogger {
 

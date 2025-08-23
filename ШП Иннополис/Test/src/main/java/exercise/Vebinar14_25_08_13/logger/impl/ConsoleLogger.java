@@ -1,6 +1,6 @@
-package exercise.Vebinar14.logger.impl;
+package exercise.Vebinar14_25_08_13.logger.impl;
 
-import exercise.Vebinar14.logger.Logger;
+import exercise.Vebinar14_25_08_13.logger.Logger;
 
 public class ConsoleLogger implements Logger {
     @Override

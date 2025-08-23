@@ -1,4 +1,4 @@
-package exercise.Vebinar14;
+package exercise.Vebinar14_25_08_13;
 
 public class Main2 {
 

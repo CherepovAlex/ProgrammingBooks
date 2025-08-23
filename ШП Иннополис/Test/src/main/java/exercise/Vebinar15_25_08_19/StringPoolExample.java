@@ -1,4 +1,4 @@
-package exercise.Vebinar15;
+package exercise.Vebinar15_25_08_19;
 
 public class StringPoolExample {
 

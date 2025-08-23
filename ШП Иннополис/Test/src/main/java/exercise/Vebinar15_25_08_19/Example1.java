@@ -1,7 +1,6 @@
-package exercise.Vebinar15;
+package exercise.Vebinar15_25_08_19;
 
 import java.lang.reflect.Method;
-import java.lang.reflect.Modifier;
 import java.lang.ClassLoader;
 
 public class Example1 {

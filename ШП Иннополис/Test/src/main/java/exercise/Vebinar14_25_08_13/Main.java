@@ -1,9 +1,9 @@
-package exercise.Vebinar14;
+package exercise.Vebinar14_25_08_13;
 
-import exercise.Vebinar14.logger.impl.ConsoleLogger;
-import exercise.Vebinar14.logger.Logger;
-import exercise.Vebinar14.logger.impl.files.CsvFileLogger;
-import exercise.Vebinar14.logger.impl.files.TxtFileLogger;
+import exercise.Vebinar14_25_08_13.logger.impl.ConsoleLogger;
+import exercise.Vebinar14_25_08_13.logger.Logger;
+import exercise.Vebinar14_25_08_13.logger.impl.files.CsvFileLogger;
+import exercise.Vebinar14_25_08_13.logger.impl.files.TxtFileLogger;
 
 public class Main {
     public static void main(String[] args) {

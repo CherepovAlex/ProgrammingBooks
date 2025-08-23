@@ -1,6 +1,6 @@
-package exercise.Vebinar14.logger.impl.files;
+package exercise.Vebinar14_25_08_13.logger.impl.files;
 
-import exercise.Vebinar14.logger.Logger;
+import exercise.Vebinar14_25_08_13.logger.Logger;
 
 import java.io.FileWriter;
 import java.io.IOException;
