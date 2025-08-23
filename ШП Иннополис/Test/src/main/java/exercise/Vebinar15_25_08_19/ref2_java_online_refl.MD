@@ -118,7 +118,7 @@ Field[] fields = cls.getFields();   //  получение массива отк
 for (Field field : fields) {        // итерация по каждому полю в массиве
     Class<?> fld = field.getType(); // возвращает Class объект, представляющий тип поля
     System.out.println("Class name : " + field.getName()); // возвращает имя поля
-    System.out.println("Class type : " + fld.getName()); 
+    System.out.println("Class type : " + fld.getName());  // возвращает тип поля
 }
 ```
 
