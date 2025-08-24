@@ -7,42 +7,37 @@ interface U {}
 class C implements A {}
 class D extends C implements B {}
  */
-
 import java.util.*;
-
 /*
 Получить все интерфейсы класса, включая интерфейсы от классов-родителей,
 и включить интерфейсы родительских интерфейсов
  */
 public class ReflectionAnd {
     public static void main(String[] args) {
-        List<Class<?>> result = getAllInterfaces(D.class);
+        List<Class<?>> result = getAllInterfaces(D.class); // метод для получения, отдаём объект Class
         result.forEach(res -> System.out.println(res.getName()));
-
     }
-
     /**
      * Метод по получению всех интерфейсов класса
      * @param cls текущий класс
      * @return список интерфейсов
      */
     private static List<Class<?>> getAllInterfaces(Class<?> cls) {
-        Set<Class<?>> interfaces = new HashSet<>();
-        collectAllInterfaces(cls, interfaces);
-        return new ArrayList<>(interfaces);
+        Set<Class<?>> interfaces = new HashSet<>(); // чтобы были уникальные
+        collectAllInterfaces(cls, interfaces);  // будем использовать рекурсию
+        return new ArrayList<>(interfaces); // вернём list
     }
-
+    // собираем все интерфейсы, в том числе классов родителей
     private static void collectAllInterfaces(Class<?> cls, Set<Class<?>> interfaces) {
-        if (cls == null || cls == Object.class) {return;}
-
+        // проверка на null или Object
+        if (cls == null || cls == Object.class) return;
         // ищем интерфейсы текущего класса
-        for (Class<?> iface : cls.getInterfaces()) {
-            interfaces.add(iface);
+        for (Class<?> iface : cls.getInterfaces()) { // получае все реализованные интерфейсы
+            interfaces.add(iface);  // добавляем в коллекцию
             // рекурсивно добавляем родительский интерфейсы
             collectAllInterfaces(iface, interfaces);
         }
-
-        // ищем в родительском классе
+        // переходти и ищем в родительском классе
         collectAllInterfaces(cls.getSuperclass(), interfaces);
     }
 }
