@@ -9,7 +9,6 @@ public class Example13 {
     public static void main(String[] args) {
         // Двойной обратный слэш \\ нужен, потому что одиночный \ является escape-символом в Java
         String path = "C:\\input.txt"; // Указывает путь к файлу input.txt на диске C:
-
         try {
             // Scanner reader = new Scanner(new FileInputStream(path));
             // Открывает поток для чтения из файла по указанному пути

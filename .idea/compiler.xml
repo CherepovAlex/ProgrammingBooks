@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.30/f195ee86e6c896ea47a1d39defbe20eb59cd149d/lombok-1.18.30.jar" />
+        </processorPath>
+        <module name="13-Validation-dz.test" />
+        <module name="13-Validation-dz.main" />
+      </profile>
+    </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="01-Java-Klassy" target="17" />
       <module name="01-Java-Klassy.main" target="17" />
@@ -36,8 +46,6 @@
       <module name="08-Java-Web-Technology" target="17" />
       <module name="08-Java-Web-Technology.main" target="17" />
       <module name="08-Java-Web-Technology.test" target="17" />
-      <module name="09-Nested-arrays.main" target="17" />
-      <module name="09-Nested-arrays.test" target="17" />
       <module name="10-get-form-ru" target="17" />
       <module name="10-get-form-ru.main" target="17" />
       <module name="10-get-form-ru.test" target="17" />
@@ -61,6 +69,9 @@
       <module name="20-Flash-messages-dz" target="17" />
       <module name="20-Flash-messages-dz.main" target="17" />
       <module name="20-Flash-messages-dz.test" target="17" />
+      <module name="21-Work-with-JDBC-dz" target="17" />
+      <module name="21-Work-with-JDBC-dz.main" target="17" />
+      <module name="21-Work-with-JDBC-dz.test" target="17" />
       <module name="23-java-servlet-dz" target="17" />
       <module name="23-java-servlet-dz.main" target="17" />
       <module name="23-java-servlet-dz.test" target="17" />
@@ -86,6 +97,9 @@
       <module name="isp3-mixing-list.main" target="21" />
       <module name="isp3-mixing-list.test" target="21" />
       <module name="isp3-uniq-lis" target="21" />
+      <module name="isp4-Avatars" target="17" />
+      <module name="isp4-Avatars.main" target="17" />
+      <module name="isp4-Avatars.test" target="17" />
       <module name="isp7-Hamming-weight" target="17" />
       <module name="isp7-Hamming-weight.main" target="17" />
       <module name="isp7-Hamming-weight.test" target="17" />
@@ -102,6 +116,9 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="02-http-crud-dz" options="-parameters -Xlint:-processing" />
+      <module name="02-http-crud-dz.main" options="-parameters -Xlint:-processing" />
+      <module name="02-http-crud-dz.test" options="-parameters -Xlint:-processing" />
       <module name="02-http-crud-pr" options="-parameters -Xlint:-processing" />
       <module name="02-http-crud-pr.main" options="-parameters -Xlint:-processing" />
       <module name="02-http-crud-pr.test" options="-parameters -Xlint:-processing" />
@@ -117,15 +134,21 @@
       <module name="06-rest-api" options="-parameters -Xlint:-processing" />
       <module name="06-rest-api.main" options="-parameters -Xlint:-processing" />
       <module name="06-rest-api.test" options="-parameters -Xlint:-processing" />
+      <module name="07-Templater-dz" options="-Xlint:-processing" />
+      <module name="07-Templater-dz.main" options="-Xlint:-processing" />
+      <module name="07-Templater-dz.test" options="-Xlint:-processing" />
       <module name="07-Templater-ru" options="-Xlint:-processing" />
       <module name="07-Templater-ru.main" options="-Xlint:-processing" />
       <module name="07-Templater-ru.test" options="-Xlint:-processing" />
       <module name="08-layout-dz" options="-Xlint:-processing" />
       <module name="08-layout-dz.main" options="-Xlint:-processing" />
       <module name="08-layout-dz.test" options="-Xlint:-processing" />
+      <module name="10-get-form" options="-Xlint:-processing" />
       <module name="10-get-form-ru" options="-Xlint:-processing" />
       <module name="10-get-form-ru.main" options="-Xlint:-processing" />
       <module name="10-get-form-ru.test" options="-Xlint:-processing" />
+      <module name="10-get-form.main" options="-Xlint:-processing" />
+      <module name="10-get-form.test" options="-Xlint:-processing" />
       <module name="13-Validation-dz" options="-Xlint:-processing" />
       <module name="13-Validation-dz.main" options="-Xlint:-processing" />
       <module name="13-Validation-dz.test" options="-Xlint:-processing" />

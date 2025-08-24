@@ -16,7 +16,7 @@ public class Example10 {
         try (InputStream in = new FileInputStream(path)) {
             int oneByte = in.read();
 
-            while (oneByte >= 0) {
+            while (oneByte >= 0) { // -1 означает конец файла (EOF - End Of File)
                 System.out.printf("%s ", Integer.toBinaryString(oneByte));
                 oneByte = in.read();
             }

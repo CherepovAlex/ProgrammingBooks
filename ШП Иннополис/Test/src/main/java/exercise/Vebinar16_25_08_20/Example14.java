@@ -13,7 +13,7 @@ public class Example14 {
         String inputPath = "C:\\input.txt";         // путь к входному файлу
         String outputPath = "C:\\output.txt";       // путь к выходному файлу
         // Ресурсы автоматически закроются после выполнения блока try
-            // создает сканер для чтения из файла input.txt
+        // создает сканер для чтения из файла input.txt
         try (Scanner scanner = new Scanner(new FileInputStream(inputPath));
              // создает писатель для записи в файл output.txt
              PrintWriter out = new PrintWriter(new FileOutputStream(outputPath))) {
