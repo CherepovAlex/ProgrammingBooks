@@ -17,23 +17,23 @@ package Easy._121BestTimeToBuyAndSellStock;
 public class Solution {
     // time O(n). space O(1)
     public int maxProfit(int[] prices) {
-        int min = Integer.MAX_VALUE;
-        int maxProfit = 0;
-        for (int i = 0; i < prices.length; i++) {
-            if (prices[i] < min) {
-                min = prices[i];
+        int min = Integer.MAX_VALUE; // Инициализируем минимальную цену максимально возможны
+        int maxProfit = 0;           // Инициализируем максимальную прибыль нулем
+        for (int i = 0; i < prices.length; i++) {   // Проходим по всем ценам
+            if (prices[i] < min) {                  // Если текущая цена меньше известного минимума
+                min = prices[i];                    // Обновляем минимум
             }
-            int currentProfit = prices[i] - min;
-            if (currentProfit > maxProfit) {
-                maxProfit = currentProfit;
+            int currentProfit = prices[i] - min;    // Вычисляем потенциальную прибыль
+            if (currentProfit > maxProfit) {        // Если текущая прибыль больше максимальной
+                maxProfit = currentProfit;          // Обновляем максимальную прибыль
             }
         }
-        return maxProfit;
+        return maxProfit;   // Возвращаем результат
     }
 
     public static void main(String[] args) {
-        int[] nums1 = new int[]{7,1,5,3,6,4};    // 5
-        int[] nums2 = new int[]{7,6,4,3,1};      // 0
+        int[] nums1 = new int[]{7, 1, 5, 3, 6, 4};    // 5
+        int[] nums2 = new int[]{7, 6, 4, 3, 1};      // 0
         System.out.println(new Solution().maxProfit(nums1));
         System.out.println(new Solution().maxProfit(nums2));
     }

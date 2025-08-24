@@ -11,17 +11,17 @@ package Easy._876MiddleOfTheLinkedList;
 //Output: [4,5,6]
 //Explanation: Since the list has two middle nodes with values 3 and 4, we return the second one.
 class ListNode {
-    int val;
-    ListNode next;
+    int val;             // Хранит значение узла
+    ListNode next;       // Ссылка на следующий узел
 
-    ListNode() {
+    ListNode() {         // Конструктор по умолчанию
     }
 
-    ListNode(int val) {
+    ListNode(int val) {  // Конструктор с значением
         this.val = val;
     }
 
-    ListNode(int val, ListNode next) {
+    ListNode(int val, ListNode next) { // Конструктор со значением и ссылкой
         this.val = val;
         this.next = next;
     }
@@ -30,16 +30,17 @@ class ListNode {
 public class Solution {
     // time O(n), space O(1)
     public ListNode middleNode(ListNode head) {
-        if (head == null || head.next == null) {
-            return head;
+        if (head == null || head.next == null) { // Если список пуст или содержит 1 элемент
+            return head;                         // Возвращаем сам элемент (или null)
         }
-        ListNode slow = head;
-        ListNode fast = head;
+        ListNode slow = head;   // Медленный указатель - начинает с головы
+        ListNode fast = head;   // Быстрый указатель - начинает с головы
+        // Пока быстрый указатель не достиг конца списка
         while (fast != null && fast.next != null) {
-            slow = slow.next;
-            fast = fast.next.next;
+            slow = slow.next;       // Медленный двигается на 1 шаг
+            fast = fast.next.next;  // Быстрый двигается на 2 шага
         }
-        return slow;
+        return slow;    // Когда быстрый достиг конца, медленный будет в середине
     }
 
     public static void main(String[] args) {

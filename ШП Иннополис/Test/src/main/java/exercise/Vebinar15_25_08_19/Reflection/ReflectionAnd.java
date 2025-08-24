@@ -1,5 +1,4 @@
 package exercise.Vebinar15_25_08_19.Reflection;
-
 /*
 interface A extends U
 interface B {}
@@ -32,12 +31,12 @@ public class ReflectionAnd {
         // проверка на null или Object
         if (cls == null || cls == Object.class) return;
         // ищем интерфейсы текущего класса
-        for (Class<?> iface : cls.getInterfaces()) { // получае все реализованные интерфейсы
+        for (Class<?> iface : cls.getInterfaces()) { // получаем все реализованные интерфейсы
             interfaces.add(iface);  // добавляем в коллекцию
             // рекурсивно добавляем родительский интерфейсы
             collectAllInterfaces(iface, interfaces);
         }
-        // переходти и ищем в родительском классе
+        // переходим и ищем в родительском классе
         collectAllInterfaces(cls.getSuperclass(), interfaces);
     }
 }
