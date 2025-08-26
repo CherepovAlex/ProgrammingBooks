@@ -14,7 +14,7 @@ public class Example6 {
             if (file.isDirectory()) {
                 // считывает все файлы в этой директории
                 File[] files = file.listFiles();
-                // запускаяем цикл
+                // запускаем цикл
                 for (File f : files) {
                     // если элемент в списке не директория
                     if (!f.isDirectory()) {

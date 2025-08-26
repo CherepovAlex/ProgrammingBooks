@@ -7,7 +7,7 @@ import java.nio.file.Paths;
 import java.util.Collections;
 import java.util.List;
 
-// нужно проситать текстовый файл, отсортировать его строки
+// нужно прочитать текстовый файл, отсортировать его строки
 // и записать в другой текстовый файл
 // использовать пути и классы файлов
 public class Example4 {

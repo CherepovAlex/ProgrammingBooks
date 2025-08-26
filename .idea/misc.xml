@@ -17,6 +17,7 @@
     <file type="web" url="file://$PROJECT_DIR$/Hexlet/Modul2/03-Java-Maps/03-Upragneniya" />
     <file type="web" url="file://$PROJECT_DIR$/Hexlet/Modul2/04-Java-Functions/Upzagneniya" />
     <file type="web" url="file://$PROJECT_DIR$/Hexlet/Modul6/01Threads" />
+    <file type="web" url="file://$PROJECT_DIR$/IBS/IBS" />
     <file type="web" url="file://$PROJECT_DIR$/JavaRush/JavaRush" />
     <file type="web" url="file://$PROJECT_DIR$/Practice/Practice" />
     <file type="web" url="file://$PROJECT_DIR$/Shildt/Shildt" />
@@ -30,6 +31,10 @@
     <file type="web" url="file://$PROJECT_DIR$/Stack-Overflow/Glava3/Glava3" />
     <file type="web" url="file://$PROJECT_DIR$/Stack-Overflow/Glava8/glava8" />
     <file type="web" url="file://$PROJECT_DIR$/ШП Иннополис/Test" />
+  </component>
+  <component name="JavadocGenerationManager">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/IBS/IBS/src/main/java/JVA007/Day2" />
+    <option name="OPTION_SCOPE" value="public" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_21" project-jdk-name="21" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />

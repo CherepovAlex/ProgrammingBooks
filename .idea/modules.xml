@@ -16,14 +16,16 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/19-Sessions-dz.main.iml" filepath="$PROJECT_DIR$/.idea/modules/19-Sessions-dz.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/19-Sessions-ru.main.iml" filepath="$PROJECT_DIR$/.idea/modules/19-Sessions-ru.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/20-Flash-messages.main.iml" filepath="$PROJECT_DIR$/.idea/modules/20-Flash-messages.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/21-Work-with-JDBC-dz.main.iml" filepath="$PROJECT_DIR$/.idea/modules/21-Work-with-JDBC-dz.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/21-Work-with-JDBC-dz.iml" filepath="$PROJECT_DIR$/.idea/modules/21-Work-with-JDBC-dz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/21-Work-with-JDBC-dz.test.iml" filepath="$PROJECT_DIR$/.idea/modules/21-Work-with-JDBC-dz.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/21-Work-with-JDBC-users.main.iml" filepath="$PROJECT_DIR$/.idea/modules/21-Work-with-JDBC-users.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/21-Work-with-JDBC.main.iml" filepath="$PROJECT_DIR$/.idea/modules/21-Work-with-JDBC.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/LeetCode/LeetCode/LeetCode.iml" filepath="$PROJECT_DIR$/LeetCode/LeetCode/LeetCode.iml" />
       <module fileurl="file://$PROJECT_DIR$/ProgrammingBooks.iml" filepath="$PROJECT_DIR$/ProgrammingBooks.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/isp1-Response-Time.main.iml" filepath="$PROJECT_DIR$/.idea/modules/isp1-Response-Time.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/isp3-Base-auth-ru.main.iml" filepath="$PROJECT_DIR$/.idea/modules/isp3-Base-auth-ru.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isp4-Avatars.main.iml" filepath="$PROJECT_DIR$/.idea/modules/isp4-Avatars.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isp4-Avatars.iml" filepath="$PROJECT_DIR$/.idea/modules/isp4-Avatars.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/isp4-Avatars.test.iml" filepath="$PROJECT_DIR$/.idea/modules/isp4-Avatars.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/isp5-Config-file.main.iml" filepath="$PROJECT_DIR$/.idea/modules/isp5-Config-file.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/isp5-Guess-number.main.iml" filepath="$PROJECT_DIR$/.idea/modules/isp5-Guess-number.main.iml" />
     </modules>
