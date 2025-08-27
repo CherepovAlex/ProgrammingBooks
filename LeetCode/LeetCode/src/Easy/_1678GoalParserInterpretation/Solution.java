@@ -18,14 +18,14 @@ package Easy._1678GoalParserInterpretation;
 //Example 3:
 //Input: command = "(al)G(al)()()G"
 //Output: "alGalooG"
-public class Solution {
-    public String interpret(String command) {
-
-    }
-
-    public static void main(String[] args) {
-        String st = "G()(al)";
-        System.out.println(new Solution().interpret(st));
-    }
-
-}
+//public class Solution {
+//    public String interpret(String command) {
+//
+//    }
+//
+//    public static void main(String[] args) {
+//        String st = "G()(al)";
+//        System.out.println(new Solution().interpret(st));
+//    }
+//
+//}
