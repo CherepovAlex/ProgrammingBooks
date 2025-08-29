@@ -2,6 +2,8 @@ plugins {
     java
 }
 
+
+
 repositories {
     mavenCentral() // Используем Maven Central для зависимостей
 }
