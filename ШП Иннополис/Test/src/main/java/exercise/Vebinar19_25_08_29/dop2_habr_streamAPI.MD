@@ -29,7 +29,7 @@
 
 ## Интерфейс Stream<T>
 
-    public interface Stream<T> extends BaseStream<T,Stream<T>>
+`public interface Stream<T> extends BaseStream<T,Stream<T>>`
 
 Интерфейс **Stream** представляет собой последовательность элементов, поддерживающих **последовательные** и *
 *параллельные**
@@ -49,25 +49,23 @@ Stream **не предоставляет** средств для **прямог�
 
 ### IntStream
 
-    public interface IntStream extends BaseStream<Integer,IntStream>
+`public interface IntStream extends BaseStream<Integer,IntStream>`
 
 ### LongStream
 
-    public interface LongStream extends BaseStream<Long,LongStream>
+`public interface LongStream extends BaseStream<Long,LongStream>`
 
 ### DoubleStream
 
-    public interface DoubleStream extends BaseStream<Double,DoubleStream>
+public interface DoubleStream extends BaseStream<Double,DoubleStream>
 
 **Создание потока примитивных типов** `mapToInt()`, `mapToDouble()`, `mapToLong()`
-
-    List<Integer> numbers = new ArrayList<>();
-
+```java
+List<Integer> numbers = new ArrayList<>();
     numbers.stream().mapToInt(value ->value);
-
     numbers.stream().mapToDouble(value ->value);
-
     numbers.stream().mapToLong(value ->value);
+```
 
 Стримы примитивных типов данных имеют ряд уникальных методов, например **диапазон** и **сумма** всех элементов потока.
 
@@ -89,29 +87,34 @@ rangeClosed(int startInclusive, int endInclusive)
 Поток элементов может быть получен разными способами, например:
 
 Stream из **List**
-
+```java
     List<String> list = new ArrayList<>();
 
     list.stream();
 
     list.parallelStream();           // параллельный поток
+```
 
 Stream из **Map**
-
+```java
     Map<String, String> map = new HashMap<>();
 
     map.entrySet().stream();
 
     map.values().stream();
+```
 
 Stream из **массива**, используя **статический** метод класса **Arrays**
 
+```java
     String[] array = new String[10];
 
     Arrays.stream(array);
+```
 
 Stream из **элементов**, используя **статические** методы **Классов-потоков**
 
+```java
     Stream.of("a", "b", "c");        // поток из элементов
 
     Stream.of(array);                // поток из элементов массива
@@ -125,21 +128,27 @@ Stream из **элементов**, используя **статические*
     IntStream.range(1, 10);          // поток диапазона чисел от 1 до 9
 
     IntStream.rangeClosed(1, 10);    // поток диапазона чисел от 1 до 10
+```
 
 Stream из строк **буфера BufferedReader**
 
+```java
     BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
     bufferedReader.lines();
+```
 
 Stream из **строк файла** через **статический метод** класса **Files**
 
+```java
     Path path = Path.of("/root/test.txt");
 
     Files.lines(path);
+```
 
 Stream из **случайных чисел Random**
 
+```java
     Random random = new Random();
     
     random.ints();
@@ -147,6 +156,7 @@ Stream из **случайных чисел Random**
     random.longs();
     
     random.doubles();
+```
 
 ## Операции над Stream
 
@@ -165,9 +175,11 @@ Stream из **случайных чисел Random**
 Операции над потоком могут выполняться как **последовательно**, так и **параллельно**.
 Чтобы превратить обычный стрим в параллельный, нужно вызвать промежуточный оператор `parallel()`
 
+```java
     Stream<String> stream = list.stream();
 
     stream.parallel();
+```
 
 ## Промежуточные операции. Intermediate
 
@@ -183,17 +195,19 @@ Stream из **случайных чисел Random**
 когда
 они будут проходить через поток.
 
-    Stream.of("a", "b", "c").peek(System.out::println);
+`Stream.of("a", "b", "c").peek(System.out::println);`
 
 **Преобразовать данные из одного типа в другой** `map()`
 
 Можно передать функцию, которая преобразовывает один тип данных в другой.
 
+```java
 `Stream.of(1, 2, 3).map((x) -> String.valueOf(x));`
 
 `Stream.of(1, 2, 3).map(String::valueOf);        // лямбда выражение`
 
 `Stream.of("1", "2", "3").map(Integer::parseInt);`
+```
 
 **Отфильтровать элементы** `filter()`
 
