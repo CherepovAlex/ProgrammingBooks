@@ -412,36 +412,90 @@ String result2 = letters.stream()
 
 ## Класс Optional
 
+Методы интерфейса **Stream** `findAny()`, `findFirst()`, `max()`, `min()` и `reduce()` возвращают объект класса **Optional**
 
+`public final class Optional<T> extends Object`
 
+Это объект-**контейнер**, который может содержать или не содержать **нулевое значение**.
 
+Ссылка на объект класса **Optional** может быть `null`.
 
+Если значение присутствует, метод `isPresent()` вернет `true`
 
+Позволяет избавиться от проверки на `null`.
 
+Без этого класса приходилось писать проверку на **NullPointerException**.
 
+Благодарю этому один объект **Optional** можно **сравнить** с другим объектом **Optional** через метод `equals()`, 
+даже если они хранят в себе ссылки на `null`.
 
+**Получить элемент Optional** `get()`
 
+Метод класса **Optoinal** – возвращает значение, если оно присутствует, в противном случае бросит **NoSuchElementException**.
 
+```java
+Stream.of("1", "22", "333")
+        .max(Comparator.comparingInt(String::length))
+        .get();
+```
 
+## Класс Collectors
 
+Метод `collect()` интерфейса Stream **собирает данные** в необходимую **структуру данных**, например в коллекции — 
+`List<T>`, `Set<T>`, `Map<T, R>` 
 
+`public interface Collector<T,A,R>`
 
+В метод `collect()` в качестве **параметра** принимает объект типа **Collector**.
 
+Статические методы класса **Collectors** возвращают такой объект класса **Collector**.
 
+`public final class Collectors extends Object`
 
+Класс Collectors содержит статические методы для **сбора элементов** в коллекцию, **обобщения** и **группировки элементов** в 
+соответствии с различными критериями и т. п., которые возвращают готовые объекты коллекций.
 
+**Преобразование потока в List** `toList()`
 
+`list.stream().collect(Collectors.toList());`
 
+**Преобразование потока в Set** `toSet()`
 
+`list.stream().collect(Collectors.toSet());`
 
+**Преобразование потока в Map** `toMap()`
 
+```java
+map.entrySet().stream()                             // создает поток из записей Map (пары ключ-значение)
+        .map(e -> String.valueOf(e).split("="))     // преобразует каждую запись в строку и разбивает по символу "="
+        .collect(Collectors.toMap(e -> e[0], e -> e[1]));// собирает обратно в Map, где 
+                                                    // первый элемент массива становится ключом, второй - значением
+```
 
+**Объединение элементов в строку String** `joining()`
 
+Объединение потока коллекции **List** в одну строку через запятую
 
+`list.stream().collect(Collectors.joining(", "));`
 
+**Сумма элементов потока** `summingInt()`, `summingDouble()`, `summingLong()`
 
+Например, сумма заработной платы сотрудников
 
+```java
+List<Employee> employees = new ArrayList<>()
 
+employees.stream()
+        .collect(Collectors.summingDouble(Employee::getSalary)));
+```
 
+**Сгруппировать элементы по условию** `groupingBy()`
 
+Группировка людей по стране
 
+```java
+List<Person> people = new ArrayList<>();
+
+people.stream()
+        .collect(Collectors.groupingBy(Person::getCountry));
+```
