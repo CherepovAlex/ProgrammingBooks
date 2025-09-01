@@ -267,10 +267,331 @@ List<Student> allStudents = teams.stream()
 
 **2.3 filter, distinct, sorted, limit**
 
+Это часто используемые методы промежуточных операций Stream, их часто применяют вместе. Описания их функций 
+представлены в предыдущей таблице. Сейчас давайте сразу перейдём к задаче:
 
+_Для списка учащихся из всех команд нам нужно узнать возраст второго и третьего самых старших из них. Они должны быть 
+не младше 18 лет. Кроме того, если есть повторяющиеся значения, их следует учитывать только один раз._
 
+```java
+List<Integer> topTwoAges = allStudents.stream() /
+      .map(Student::getAge) //[18, 17, 19, 19, 21, 21]
+      .filter(a -> a >= 18) //[18, 19, 19, 21, 21]
+      .distinct()   //[18, 19, 21]
+      .sorted((a1, a2) -> a2 - a1)  //
+      .skip(1)  //[19, 18]
+      .limit(2) //[19, 18]
+      .collect(Collectors.toList());
+    
+System.out.println(topTwoAges);
+```
 
+Вывод:
 
+`[19, 18]`
+
+Примечание: так как после выполнения метода `skip` остаётся только два элемента, шаг `limit` можно было бы опустить.
+
+Думаю, вы легко поймёте функции этих методов без дополнительных пояснений. Настоятельно рекомендую попробовать 
+реализовать их самостоятельно, чтобы закрепить знания.
+
+**2.4 peek, forEach**
+
+Оба метода `peek` и `forEach` можно использовать для обхода элементов и их поочерёдной обработки, поэтому мы разберём
+их вместе для сравнения. Однако стоит отметить, что `peek` является методом _промежуточной_ операции, а `forEach` — 
+_терминальной_.
+
+Как описывалось ранее, промежуточная операция может использоваться только в качестве шага обработки в середине 
+конвейера потока. Её нельзя выполнить напрямую для получения результата. Для выполнения промежуточной операции 
+потребуется терминальная операция.
+
+Как метод терминальной операции, не возвращающий значения, `forEach` может выполнять соответствующую операцию напрямую.
+
+Например, давайте поприветствуем каждого студента из баскетбольной команды, используя `peek` и `forEach` соответственно:
+
+```java
+//peak
+System.out.println("------start peek------");
+basketballTeam.getStudents().stream()
+    .peek(s -> System.out.println("Hello, " + s.getName()));
+System.out.println("------end peek------");
+
+System.out.println();
+//foreach
+System.out.println("------start foreach------");
+basketballTeam.getStudents().stream()
+    .forEach(s -> System.out.println("Hello, " + s.getName()));
+System.out.println("------end foreach------");
+```
+
+Как видно из вывода, метод `peek` не выполняется, если вызывается самостоятельно, в то время как `forEach` может быть 
+выполнен напрямую:
+
+```java
+------start peek------
+------end peek------
+
+------start foreach------
+Hello, Bob
+Hello, Ted
+Hello, Zeka
+------end foreach------
+```
+
+Если добавить терминальную операцию после `peek`, он будет выполнен.
+
+```java
+System.out.println("------start peek------");
+basketballTeam.getStudents().stream()
+        .peek(s -> System.out.println("Hello, " + s.getName()))
+        .count();
+System.out.println("------end peek------");
+
+//output
+------start peek------
+Hello, Bob
+Hello, Ted
+Hello, Zeka
+------end peek------
+```
+
+Стоит отметить, что метод `peek` следует использовать с осторожностью для выполнения бизнес-логики обработки. Подумайте:
+если есть терминальный метод, будет ли выполнен `peek`? Ответ: неопределённо! Всё зависит от версии Java и конкретной
+ситуации.
+
+Например, в версии _Java 8_ метод `peek` из предыдущего примера выполнится нормально, но в Java 17 он будет 
+автоматически оптимизирован, и логика внутри peek может не выполниться. Причины этого поведения можно найти в 
+официальной документации API JDK 17.
+
+![img_3.png](img_3.png)
+
+Для таких методов, как `findFirst` и `count`, метод `peek` рассматривается как операция, не влияющая результат, поэтому
+он оптимизируется и не выполняется.
+
+Из комментариев к исходному коду `peek` можно увидеть, что рекомендованный сценарий его использования — это отладка. 
+Вы можете использовать `peek` для вывода информации о каждом элементе, чтобы упростить отладку и анализ проблем в 
+процессе разработки. Как и следует из названия, `peek` служит для «подглядывания» за изменениями данных во время 
+выполнения.
+
+![img_4.png](img_4.png)
+
+**3. Терминальная операция**
+
+Терминальные операции делятся на две категории.
+
+_Первая категория_ — получение простых результатов. Сюда относятся методы `max`, `min`, `count`, `findAny`, `findFirst`,
+`anyMatch`, `allMatch` и другие. Под «простыми» понимаются результаты в форме _чисел_, логических значений (_Boolean_) 
+или объектов типа `Optional`.
+
+_Вторая категория_ — сбор элементов в _коллекцию_. Большинство сценариев связано с получением объекта результата класса 
+коллекций, таких как `List`, `Set` или `HashMap`. Это реализуется с помощью метода `collect`.
+
+**3.1 Простые типы результатов**
+
+**(1) max, min**
+
+Методы `max()` и `min()` используются для возврата максимального/минимального значения элемента после обработки потока. 
+Результат возвращается в обёртке `Optional`. 
+
+Пример:
+
+_Скажите, кто самый старший и самый младший в футбольной команде?_
+
+```java
+//max
+footballTeam.getStudents().stream()
+    .map(Student::getAge)
+    .max(Comparator.comparing(a -> a))
+    .ifPresent(a -> System.out.println("The maximum age for a football team is " + a));
+```
+
+```java
+//min
+footballTeam.getStudents().stream()
+    .map(Student::getAge)
+    .min(Comparator.comparing(a -> a))
+    .ifPresent(a -> System.out.println("The minimum age for a football team is " + a));
+```
+
+Вывод:
+
+```java
+The maximum age for a football team is 21
+The minimum age for a football team is 19
+```
+
+**2. findAny, findFirst**
+
+Методы `findAny()` и `findFirst()` в основном используются для _завершения_ обработки потока, когда _найден_ элемент, 
+удовлетворяющий заданным условиям. Для _последовательных_ потоков (serial Stream) `findAny()` работает так же, как 
+`findFirst`, однако для _параллельных_ потоков (parallel Stream) `findAny()` более эффективен.
+
+Предположим, в баскетбольной команде появился новый студент, Том, которому 19 лет.
+
+```java
+List<Student> basketballStudents = Lists.newArrayList(
+                new Student("Bob", 18),
+                new Student("Ted", 17),
+                new Student("Zeka", 19),
+	            new Student("Tom", 19));
+```
+
+Рассмотрим результаты следующих двух задач:
++ Вернуть имя _первого_ студента в баскетбольной команде, возраст которого равен 19;
++ Вернуть имя _любого_ студента в баскетбольной команде, возраст которого равен 19.
+
+```java
+//findFirst
+basketballStudents.stream()
+    .filter(s -> s.getAge() == 19)
+    .findFirst()
+    .map(Student::getName)
+    .ifPresent(name -> System.out.println("findFirst: " + name));
+```
+
+```java
+//findAny
+basketballStudents.stream()
+    .filter(s -> s.getAge() == 19)
+    .findAny()
+    .map(Student::getName)
+    .ifPresent(name -> System.out.println("findAny: " + name));
+```
+
+Вывод:
+
+```java
+findFirst: Zeka
+findAny: Zeka
+```
+
+Как видно, при использовании последовательного потока между этими методами нет разницы. Различия в параллельной 
+обработке будут рассмотрены позже.
+
+**3. count**
+
+Так как к баскетбольной команде присоеднилися новый студент, сколько студентов теперь в команде?
+
+```java
+System.out.println("The number of students on the basketball team: " + basketballStudents.stream().count());
+```
+
+Вывод:
+
+```java
+The number of students on the basketball team: 4
+```
+
+**4. anyMatch, allMatch, noneMatch**
+
+Как следует из названий, эти три метода используются для проверки, удовлетворяют ли элементы заданным условиям, и 
+возвращают логическое значение (`boolean`). Рассмотрим три примера:
++ Есть ли в футбольной команде студент по имени Алан?
++ Все ли студенты в футбольной команде моложе 22 лет?
++ Нет ли в футбольной команде студентов старше 20 лет?
+
+```java
+// соответствие хотя бы одного элемента
+System.out.println("anymatch: " + footballStudent.stream().anyMatch(s -> s.getName().equals("Alan")));
+```
+
+```java
+// соответствие всех элементов
+System.out.println("allmatch: " + footballStudent.stream().allMatch(s -> s.getAge() < 22));//nonematch
+System.out.println("noneMatch: " + footballStudent.stream().noneMatch(s -> s.getAge() > 20));
+```
+
+**3.2 Типы результатов для коллекций**
+
+**(1) Создание коллекции**
+
+Создание коллекций — это, вероятно, самый распространённый сценарий использования метода `collect`. Помимо `List`, 
+упомянутого ранее, также можно создавать `Set`, `Map` и другие коллекции. Пример:
+
+```java
+// Получить актуальное распределение возрастов студентов в баскетбольной команде, без дубликатов.
+Set<Integer> ageSet = basketballStudents.stream()
+                .map(Student::getAge)
+                .collect(Collectors.toSet());
+System.out.println("set: " + ageSet);
+```
+
+```java
+// Получить карту (отображение) имён и возрастов всех студентов в баскетбольной команде.
+Map<String, Integer> nameAndAgeMap = basketballStudents.stream()
+                .collect(Collectors.toMap(Student::getName, Student::getAge));
+System.out.println("map: " + nameAndAgeMap);
+```
+
+**(2) Генерация объединённой строки**
+
+Помимо создания коллекций, `collect` также может использоваться для объединения строк.
+
+Например, после получения имён всех студентов в баскетбольной команде, мы хотим объединить их через запятую и вернуть 
+строку:
+
+```java
+System.out.println(basketballStudents.stream()
+    .map(Student::getName)
+    .collect(Collectors.joining(",")));
+```
+
+Вывод:
+
+```java
+Bob,Ted,Zeka,Tom
+```
+
+Вы можете сказать: «Разве для этого нельзя использовать `String.join()`? Нет необходимости применять Stream в этой 
+ситуации». Но стоит отметить, что прелесть Stream заключается в его способности сочетаться с другой бизнес-логикой, что
+делает код более естественным и последовательным. Если ваша задача — только объединение строк, то, действительно, 
+использование Stream не обязательно. Зачем стрелять из пушки по воробьям?
+
+Кроме того, метод `Collectors.joining()` поддерживает добавление префиксов и суффиксов, что делает его ещё более мощным.
+
+```java
+System.out.println(basketballStudents.stream()
+    .map(Student::getName)
+    .collect(Collectors.joining(",", "(",")")));
+```
+
+Вывод:
+
+```java
+(Bob,Ted,Zeka)
+```
+
+**(3) Генерация статистических результатов**
+
+Ещё один сценарий, который редко используется на практике, — это применение `collect` для подсчёта суммы числовых 
+данных. Рассмотрим это вкратце.
+
+```java
+// Вычислить среднее
+System.out.println("average age: " + basketballStudents.stream()
+        .map(Student::getAge)
+        .collect(Collectors.averagingInt(a -> a)));
+```
+
+```java
+// Сводная статистика
+IntSummaryStatistics summary = basketballStudents.stream()
+    .map(Student::getAge)
+    .collect(Collectors.summarizingInt(a -> a));
+System.out.println("summary: " + summary);
+```
+
+В приведённом выше примере используется `collect` для выполнения математических операций над возрастами студентов. 
+Результаты следующие:
+
+```java
+average age: 18.0
+summary: IntSummaryStatistics{count=3, sum=54, min=17, average=18.000000, max=19}
+```
+
+## Параллельные потоки
+
+**Описание механизма**
 
 
 
