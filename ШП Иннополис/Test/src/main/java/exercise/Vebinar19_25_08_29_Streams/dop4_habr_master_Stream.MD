@@ -593,6 +593,97 @@ summary: IntSummaryStatistics{count=3, sum=54, min=17, average=18.000000, max=19
 
 **Описание механизма**
 
+Использование параллельных потоков позволяет эффективно задействовать ресурсы компьютера и ускорить выполнение задач. 
+Параллельный поток делит весь поток на несколько фрагментов, затем выполняет обработку каждого фрагмента параллельно и,
+в конце, объединяет результаты в единый поток.
+
+Как показано на диаграмме ниже, происходит фильтрация чисел, которые больше или равны 18:
+
+![img_5.png](img_5.png)
+
+**Эффективное использование findAny()**
+
+Как уже упоминалось, метод `findAny()` более эффективен при работе с параллельными потоками. В документации API также
+указано, что результаты выполнения этого метода могут различаться при каждом запуске.
+
+![img_6.png](img_6.png)
+
+Попробуем выполнить `findAny()` 10 раз, используя `parallelStream`, чтобы найти любое имя студента, соответствующее 
+критериям (например, Bob, Tom или Zeka):
+
+```java
+for (int i = 0; i < 10; i++) {
+    basketballStudents.parallelStream()
+        .filter(s -> s.getAge() >= 18)
+        .findAny()
+        .map(Student::getName)
+        .ifPresent(name -> System.out.println("findAny in parallel stream: " + name));
+}
+```
+
+Вывод:
+
+```java
+findAny in parallel stream: Zeka
+findAny in parallel stream: Zeka
+findAny in parallel stream: Tom
+findAny in parallel stream: Zeka
+findAny in parallel stream: Zeka
+findAny in parallel stream: Bob
+findAny in parallel stream: Zeka
+findAny in parallel stream: Zeka
+findAny in parallel stream: Zeka
+findAny in parallel stream: Zeka
+```
+
+Этот результат подтверждает _нестабильность_ метода `findAny()`.
+
+Чтобы лучше раскрыть тему параллельных потоков, я проведу дополнительный анализ в следующей статье.
+
+**Дополнительная информация**
+
+**1. Отложенное выполнение**
+
+Потоки являются ленивыми; вычисления выполняются только при вызове терминальной операции, а исходные элементы 
+потребляются по мере необходимости. Например, метод `peek`, упомянутый ранее, является хорошим примером.
+
+**2. Избегайте повторного выполнения терминальных операций** 
+
+Важно помнить, что после завершения потока его _нельзя_ использовать для выполнения других операций. Попытка сделать это
+приведёт к ошибке. Рассмотрим следующий пример:
+
+```java
+Stream<Student> studentStream = basketballStudents.stream()
+        .filter(s -> s.getAge() == 19);
+    // Вычислить количество студентов
+System.out.println("Количество студентов: " + studentStream.count());
+    // Если попытаться снова, будет выдана ошибка
+try {
+    System.out.println("Количество студентов: " + studentStream.count());
+} catch (Exception e) {
+    e.printStackTrace();
+}
+```
+
+Вывод:
+
+```java
+the number of students: 2
+java.lang.IllegalStateException: stream has already been operated upon or closed
+			at java.util.stream.AbstractPipeline.<init>(AbstractPipeline.java:203)
+			...
+```
+
+**Заключение**
+
+В этой статье мы рассмотрели, как использовать Stream для написания более элегантного кода на Java на основе нескольких
+примеров, а также кратко описали фактическую роль каждого API. 
+
+Ввиду ограниченного объёма статьи, использование методов `collect` и параллельных потоков было рассмотрено лишь 
+поверхностно.
+
+Для полного освоения Stream недостаточно изучить материал теоретически — нужно обязательно практиковаться на реальных
+проектах.
 
 
 
