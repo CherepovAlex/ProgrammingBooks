@@ -10,7 +10,7 @@ public class Example3 {
     public static void main(String[] args) {
 
         // Промежуточные операции, не завершают поток:
-        // map - "Function: V apply(T t))" - преобразовать данные, чтобы что с каждым из них произошло
+        // map - "Function: V apply(T t))" - преобразовать данные, чтобы что-то с каждым из них произошло
         // filter - "Predicate: boolean test(T t)" - проверяет подошло или нет
         // distinct - уникальные, sorted - сортировка,
         // peek - "Consumer: void accept(T t)" - выполняет действие для элементов потока без его изменения:
