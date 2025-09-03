@@ -1,4 +1,4 @@
-package exercise.Consultation10_25_08_28;
+package exercise.Consultation10G_25_08_28;
 
 import java.util.*;
 import java.util.stream.Collectors;
