@@ -1,4 +1,4 @@
-package exercise.Attestation;
+package exercise.Attestation.Attestation01;
 
 import java.util.Objects;
 
@@ -26,7 +26,7 @@ class Product {
     }
 
     public void setProductName(String productName) {
-        if (productName.isBlank()) {
+        if (productName == null || productName.isBlank()) {
             System.out.println("Название продукта не может быть пустой строкой, оно должно быть");
         } else {
             this.productName = productName;
@@ -43,17 +43,15 @@ class Product {
 
     @Override
     public String toString() {
-        return "Product{" +
-                "productName='" + productName + '\'' +
-                ", price=" + price +
-                '}';
+        return productName + " (" + price + ")";
     }
 
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Product product = (Product) o;
-        return Double.compare(price, product.price) == 0 && Objects.equals(productName, product.productName);
+        return price == product.price &&
+                Objects.equals(productName, product.productName);
     }
 
     @Override

@@ -1,4 +1,4 @@
-package exercise.Attestation;
+package exercise.Attestation.Attestation01;
 
 import java.util.Arrays;
 import java.util.Objects;
@@ -35,7 +35,7 @@ class Person {
     }
 
     public void setName(String name) {
-        if (name.isBlank() || name.length() <= 3) {
+        if (name == null || name.isBlank() || name.length() <= 3) {
             System.out.println("Имя не может быть пустым или короче 3 символов");
         } else {
             this.name = name;
@@ -44,21 +44,21 @@ class Person {
 
     public void setMoney(int money) {
         if (money < 0) {
-            System.out.println("Деньги не могут быть отрицательным числом");
+            System.out.println("Деньги не могут быть отрицательным");
         } else {
             this.money = money;
         }
     }
 
     public void setProducts(Product[] products) {
-        this.personProducts = products;
+        this.personProducts = products != null ? products : new Product[0];
     }
 
     @Override
     public String toString() {
         var sb = new StringBuilder();
         for (Product product : personProducts) {
-            sb.append(product.getProductName() == "" ? "" : ", " + product);
+            sb.append(product == null ? "" : ", " + product);
         }
         return name + " - " + sb;
     }
@@ -67,7 +67,9 @@ class Person {
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Person person = (Person) o;
-        return money == person.money && Objects.equals(name, person.name) && Objects.deepEquals(personProducts, person.personProducts);
+        return money == person.money &&
+                Objects.equals(name, person.name) &&
+                Objects.deepEquals(personProducts, person.personProducts);
     }
 
     @Override
