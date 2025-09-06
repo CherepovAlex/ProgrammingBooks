@@ -65,12 +65,144 @@ BigInteger valueFromUnsignedBytes = new BigInteger(sign, unsignedBytes);
 
 ## Раздел 20.2. Примеры математических операций с числами BigInteger
 
+Объект `BigInteger` - неизменяемый объект, поэтому результаты любой математической операции необходимо присваивать
+новому экземпляру `BigInteger`.
+
+**Сложение: 10 + 10 = 20**
+
+```java
+BigInteger value1 = new BigInteger("10");
+BigInteger value2 = new BigInteger("10");
+
+BigInteger sum = value1.add(value2);
+System.out.println(sum);
+```
+
+Выводит: 20
+
+**Вычитание: 10 - 9 = 1**
+
+```java
+BigInteger value1 = new BigInteger("10");
+BigInteger value2 = new BigInteger("10");
+
+BigInteger sub = value1.subtract(value2);
+System.out.println(sub);
+```
+
+Выводит: 1
+
+**Деление: 10/5 = 2**
+
+```java
+BigInteger value1 = new BigInteger("10");
+BigInteger value2 = new BigInteger("10");
+
+BigInteger div = value1.divide(value2);
+System.out.println(div);
+```
+
+Выводит: 2
+
+**Целочисленное деление: 17/4 = 4**
+
+```java
+BigInteger value1 = new BigInteger("17");
+BigInteger value2 = new BigInteger("4");
+
+BigInteger div = value1.divide(value2);
+System.out.println(div);
+```
+
+Выводит: 4
+
+**Умножение: 10 * 5 = 50**
+
+```java
+BigInteger value1 = new BigInteger("10");
+BigInteger value2 = new BigInteger("5");
+
+BigInteger mul = value1.multiply(value2);
+System.out.println(mul);
+```
+
+Выводит: 50
+
+**Возведение в степень: 10 ^ 3 = 1000**
+
+```java
+BigInteger value1 = new BigInteger("10");
+BigInteger power = value1.pow(3);
+System.out.println(power);
+```
+
+Выводит: 1000
+
+**Деление по модулю (остаток от деление): 10 % 6 = 4**
+
+```java
+BigInteger value1 = new BigInteger("10");
+BigInteger value2 = new BigInteger("6");
+
+BigInteger power = value1.remainder(value2);
+System.out.println(power);
+```
+
+Выводит: 4
+
+**НОД(GCD): Наибольший общий делитель (GCD) для 12 и 18 равен 6**
+
+```java
+BigInteger value1 = new BigInteger("12");
+BigInteger value2 = new BigInteger("18");
+
+System.out.println(value1.gcd(value2));
+```
+
+Выводит: 6
+
+**Определение максимального из двух чисел:**
+
+```java
+BigInteger value1 = new BigInteger("10");
+BigInteger value2 = new BigInteger("11");
+
+System.out.println(value1.max(value2));
+```
+
+Выход: 11
+
+**Определение минимального из двух чисел:**
+
+```java
+import java.math.BigInteger;
+
+BigInteger value1 = new BigInteger("10");
+BigInteger value2 = new BigInteger("11");
+
+System.out.println(value1.min(value2));
+```
+
+Выводит: 10
 
 [к оглавлению Глава 20](#глава-20-класс-biginteger)
+
+## Раздел 20.3. Сравнение чисел BigInteger
+
+
+
+[к оглавлению Глава 20](#глава-20-класс-biginteger)
+
 
 [Раздел 20.1. Инициализация](#раздел-201-инициализация)
 
 [Раздел 20.2. Примеры математических операций с числами BigInteger](#раздел-202-примеры-математических-операций-с-числами-biginteger)
+
+
+
+
+
+
 
 
 
