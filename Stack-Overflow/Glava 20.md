@@ -265,6 +265,85 @@ if (reallyBig.compareTo(reallyBig1)) == 0) {
 
 ## Раздел 20.4. Бинарные логические операции над значениями BigInteger
 
+Класс `BigInteger` поддерживает бинарные логические операции, которые доступны и для типов данных `Number`. Подобно 
+всем остальным операциям, они реализуются вызовом соответствующего метода.
+
+**Бинарный или**:
+
+```java
+BigInteger val1 = new BigInteger("10");
+BigInteger val2 = new BigInteger("9");
+
+val1.or(val2);
+```
+
+    Выходные данные: 11 (что эквивалентно 10 | 9)
+
+**Бинарный и**:
+
+```java
+BigInteger val1 = new BigInteger("10");
+BigInteger val1 = new BigInteger("9");
+
+val1.and(val2);
+```
+
+    Выход: 8 (что эквивалентно 10 & 9)
+
+**Бинарный Xor**:
+
+```java
+BigInteger val1 = new BigInteger("10");
+BigInteger val1 = new BigInteger("9");
+
+val1.xor(val2);
+```
+
+    Вывод: 3 (что эквивалентно 10 ^ 9)
+
+**Сдвиг вправо (RightShift)**:
+
+```java
+BigInteger val1 = new BigInteger("10");
+val1.shiftRight(1);     // аргумент должен быть целым числом
+```
+
+    Выход: 5 (эквивалентно 10 >> 1)
+
+**Сдвиг влево (LeftShift)**:
+
+```java
+BigInteger val1 = new BigInteger("10");
+val1.shiftLeft(1);     // здесь параметр должен быть Integer
+```
+
+    Выход: 20 (эквивалентно 10 << 1)
+
+**Двоичная инверсия (Not)**:
+
+```java
+BigInteger val1 = new BigInteger("10");
+val1.not();
+```
+
+    Выход: 5
+
+**Двоичное NAND (And-Not) И-НЕ:**
+
+```java
+BigInteger val1 = new BigInteger("10");
+BigInteger val2 = new BigInteger("9");
+
+val1.andNot(val2);
+```
+
+    Выход: 7
+
+[к оглавлению Глава 20](#глава-20-класс-biginteger)
+
+## Раздел 20.5. Генерация случайных BigIntegers
+
+
 
 
 [к оглавлению Глава 20](#глава-20-класс-biginteger)
@@ -277,7 +356,7 @@ if (reallyBig.compareTo(reallyBig1)) == 0) {
 
 [Раздел 20.4. Бинарные логические операции над значениями BigInteger](#раздел-204-бинарные-логические-операции-над-значениями-biginteger)
 
-
+[Раздел 20.5. Генерация случайных BigIntegers](#раздел-205-генерация-случайных-bigintegers)
 
 
 

@@ -15,6 +15,9 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.0")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.0")
     implementation("net.datafaker:datafaker:2.0.2")
+    implementation("com.github.oshi:oshi-core:6.4.9")
+    implementation("org.apache.poi:poi-ooxml:5.2.3")
+
 }
 
 // Настройка кодировки для компиляции и запуска
