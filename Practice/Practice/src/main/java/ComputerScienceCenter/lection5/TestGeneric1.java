@@ -146,6 +146,33 @@ public class TestGeneric1 {
         // параметризованные методы и конструкторы
 //        setNotNull(n2, 123);
 //        ShmoptionUtils.<Number>setNotNull(n, 123);
+
+        // стирание (erasure)
+        Shmoption<Integer> integer6 = new Shmoption<>(10);
+//      Shmoption<String> string6 = ((Shmoption<String>) integer6); // ошибка
+
+        Shmoption<?> any = integer6;    // надкаст
+        Shmoption<String> string7 = (Shmoption<String>) any;    // предупреждение
+
+        String s6 = string7.get();  // ClassCastException, т.к. он вернёт Integer
+
+        NumberShmoption<Integer> number6 = (NumberShmoption<Integer>) integer6;// нормально, редкое и проверяемое
+
+        // raw-типы (сырые типы) c Java 1.4.2 и старше - компилятор не проверяет; лучше избегать
+        Shmoption shmoption = new Shmoption(10);
+        shmoption.set("foo");
+        Object o = shmoption.get();
+
+// Дженерики и массивы не дружат - запрещены, лучше использовать для целей иметь объекты обобщенных типов - коллекции
+        Shmoption<?>[] array = new Shmoption<?>[10];    // единственное, что можно - "?"
+//      Shmoption<Integer>[] arrayInt = new Shmoption<Integer>[10]; - ошибка
+        // но можно использовать raw-тип, но он будет не безопасным
+        Shmoption<Integer>[] arrayInt = new Shmoption[10];  // предупреждение
+        Object[] obj = arrayInt;    // апкаст к Object
+        obj[0] = new Shmoption<>("foo");    // можно положить любой объект
+        Shmoption<Integer> shmoption2 = arrayInt[0];    // достаём наш тип
+        Integer x = shmoption2.get();   // ClassCastException, т.к. мы туда положили String
+        System.out.println(x);
     }
 
     // унаследуем
