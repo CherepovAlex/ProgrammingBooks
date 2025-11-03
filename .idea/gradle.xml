@@ -334,6 +334,16 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul2/ExtendedOOP_2_3/ExtendedOOP_2_3" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul2/ExtendedOOP_2_3/ExtendedOOP_2_3" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul3/03-Java-OOP/01-Bezopasnaya-registraciya" />
         <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
         <option name="gradleJvm" value="#JAVA_HOME" />
@@ -709,6 +719,16 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/Hexlet/Modul4/08-Java-Web-Technology/isp5-Guess-number-ru" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul4/ProjectingREST_API/ProjectingREST_API" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul4/ProjectingREST_API/ProjectingREST_API" />
           </set>
         </option>
       </GradleProjectSettings>
