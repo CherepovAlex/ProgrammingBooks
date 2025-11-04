@@ -441,7 +441,44 @@ _побочные эффекты_ и _исключения_. Помогает п
 - **Нуллабельность и единицы измерения**: `@return` никогда не `null`, суммы в центах, время в миллисекундаз и т.п.
 - **Сложность (по желанию)**: `O(n)` и т.п.
 
+Пример: действие с побочным эффектом
 
+```java
+class Main {
+    /**
+     * Withdraws the specified amount from the account balance // что делает метод - Снимает указанную сумму с баланса счета 
+     * 
+     * <p><b>Proconditions:</b> {@code cents > 0} and {@code cents <= getBalanceCents()}</p> // предусловия
+     * <p><b>Postconditions:</b> {@code getBalanceCents()} decreases exactly by {@code cents}.</p> // постусловия - уменьшается ровно на
+     *
+     * @param cents amount to withdraw, in cents // параметры - сумма для снятия, в центах
+     * @throws IllegalArgumentException if {@code cents <= 0} or {@code cents > getBalanceCents()}  // исключения
+     * @implSpec The method updates internal state and writes an audit record. // спека для имплементирования -  
+     *                                      // Метод обновляет внутреннее состояние и записывает запись аудита
+     * @apiNote This method is not thread-safe; synchronized externally if used from multiply threads. // описание использования
+     *                 // Этот метод не потокобезопасен; синхронизируйте внешне при использовании из нескольких потоков.
+     */
+    public void withDraw(long cents) {}
+}
+```
+
+Пример: "поиск" без null
+
+```java
+class Main {
+    /**
+     * Finds a user by email
+     *
+     * <p><b>Postconditions:</b> never returns {@code null}; empty Optional if not found. </p>
+     *
+     * @param email non-blank email address
+     * @return Optional containin the user if present
+     * @throws IllegalArgumentException if {@code email} is blank
+     * @see java.util.Optional
+     */
+    public Optional<User> findByEmail(String email) { }
+}
+```
 
 
 
