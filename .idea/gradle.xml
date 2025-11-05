@@ -364,6 +364,26 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul2/MasscodingCollectionsList/MasscodingCollectionsList" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul2/MasscodingCollectionsList/MasscodingCollectionsList" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul2/MasscodingListMapReshenieZadach/MasscodingListMapReshenieZadach" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Hexlet/Modul2/MasscodingListMapReshenieZadach/MasscodingListMapReshenieZadach" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/Hexlet/Modul3/03-Java-OOP/01-Bezopasnaya-registraciya" />
         <option name="gradleHome" value="$PROJECT_DIR$/../Gradle/gradle-8.10.2" />
         <option name="gradleJvm" value="#JAVA_HOME" />
