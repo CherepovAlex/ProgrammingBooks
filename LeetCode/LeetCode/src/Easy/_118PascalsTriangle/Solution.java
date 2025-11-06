@@ -22,14 +22,16 @@ public class Solution {
 
         for (int i = 1; i < numRows; i++) { // / Начинаем со второй строки (индекс 1)
             List<Integer> previousRow = result.get(i - 1);  // Берем предыдущую строку
-            List<Integer> currentRow = new ArrayList<>(); // Создаем новую строку
+            List<Integer> currentRow = new ArrayList<>();   // Создаем новую строку
+
             currentRow.add(1); // Первый элемент всегда 1
 
             for (int j = 1; j < i; j++) {   // Заполняем середину строки
-                // Суммируем два элемента из предыдущей строки
+                                            // Суммируем два элемента из предыдущей строки
                 currentRow.add(previousRow.get(j - 1) + previousRow.get(j));
             }
             currentRow.add(1); // Последний элемент всегда 1
+
             result.add(currentRow); // Добавляем строку в результат
         }
         return result;
