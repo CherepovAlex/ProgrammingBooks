@@ -71,6 +71,7 @@
       <module name="23-Servlets-p1" target="17" />
       <module name="23-Servlets-p1.main" target="17" />
       <module name="23-Servlets-p1.test" target="17" />
+      <module name="ArrayList_LinkedList" target="21" />
       <module name="guess-game" target="17" />
       <module name="guess-game.main" target="17" />
       <module name="guess-game.test" target="17" />
