@@ -3,14 +3,6 @@
   <component name="CompilerConfiguration">
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
-      <profile name="Gradle Imported" enabled="true">
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.30/f195ee86e6c896ea47a1d39defbe20eb59cd149d/lombok-1.18.30.jar" />
-        </processorPath>
-        <module name="WorkshopSpringBoot.main" />
-        <module name="WorkshopSpringBoot.test" />
-      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="01-Java-Klassy" target="17" />
@@ -120,6 +112,9 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="01-Vvedenie" options="-parameters" />
+      <module name="01-Vvedenie.main" options="-parameters" />
+      <module name="01-Vvedenie.test" options="-parameters" />
       <module name="02-http-crud-dz" options="-parameters -Xlint:-processing" />
       <module name="02-http-crud-dz.main" options="-parameters -Xlint:-processing" />
       <module name="02-http-crud-dz.test" options="-parameters -Xlint:-processing" />
