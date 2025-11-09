@@ -3,6 +3,14 @@
   <component name="CompilerConfiguration">
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.30/f195ee86e6c896ea47a1d39defbe20eb59cd149d/lombok-1.18.30.jar" />
+        </processorPath>
+        <module name="WorkshopSpringBoot.main" />
+        <module name="WorkshopSpringBoot.test" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="01-Java-Klassy" target="17" />
@@ -72,6 +80,8 @@
       <module name="23-Servlets-p1.main" target="17" />
       <module name="23-Servlets-p1.test" target="17" />
       <module name="ArrayList_LinkedList" target="21" />
+      <module name="ArrayList_LinkedList.main" target="21" />
+      <module name="ArrayList_LinkedList.test" target="21" />
       <module name="guess-game" target="17" />
       <module name="guess-game.main" target="17" />
       <module name="guess-game.test" target="17" />
@@ -152,6 +162,9 @@
       <module name="23-java-servlet-dz" options="-Xlint:-processing" />
       <module name="23-java-servlet-dz.main" options="-Xlint:-processing" />
       <module name="23-java-servlet-dz.test" options="-Xlint:-processing" />
+      <module name="WorkshopSpringBoot" options="-parameters -Xlint:-processing" />
+      <module name="WorkshopSpringBoot.main" options="-parameters -Xlint:-processing" />
+      <module name="WorkshopSpringBoot.test" options="-parameters -Xlint:-processing" />
       <module name="isp1-Counter" options="-Xlint:-processing" />
       <module name="isp1-Counter.main" options="-Xlint:-processing" />
       <module name="isp1-Counter.test" options="-Xlint:-processing" />
