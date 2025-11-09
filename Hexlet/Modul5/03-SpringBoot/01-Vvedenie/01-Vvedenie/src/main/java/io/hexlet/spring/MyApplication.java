@@ -12,9 +12,17 @@ public class MyApplication {
         SpringApplication.run(MyApplication.class, args);
     }
 
-    @GetMapping("/")    // Обработчик маршрута и маршрут, переданным в нее.
+    @GetMapping("/")
+        // Обработчик маршрута и маршрут, переданным в нее.
     String home() {        // Сам обработчик называется home(),
         return "Hello World!"; // Обработчик возвращает строку, которая вернется как тело HTTP-ответа,
-                               // что удобно в простых ситуация
+        // что удобно в простых ситуация
     }
+
+    // BEGIN (write your solution here)
+    @GetMapping("/about")
+    String about() {
+        return "This is Spring Boot App";
+    }
+    // END
 }

@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/01-Bezopasnaya-registraciya.main.iml" filepath="$PROJECT_DIR$/.idea/modules/01-Bezopasnaya-registraciya.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/01-Obrabotchiki-zaprosov.main.iml" filepath="$PROJECT_DIR$/.idea/modules/01-Obrabotchiki-zaprosov.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/04-Annotations.main.iml" filepath="$PROJECT_DIR$/.idea/modules/04-Annotations.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/05-Fabrika-ru.main.iml" filepath="$PROJECT_DIR$/.idea/modules/05-Fabrika-ru.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/05-Fabrika.main.iml" filepath="$PROJECT_DIR$/.idea/modules/05-Fabrika.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/07-Templater-dz.main.iml" filepath="$PROJECT_DIR$/.idea/modules/07-Templater-dz.main.iml" />
