@@ -25,9 +25,9 @@ public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
     }
-    // пример GET /pages?limit=5 => HTTP/1.1 200 OK \ X-Total-Count: 42 \ тело — первые 5 страниц в JSON
+        // пример GET /pages?limit=5 => HTTP/1.1 200 OK \ X-Total-Count: 42 \ тело — первые 5 страниц в JSON
     @GetMapping("/pages")
-    // определяем метод контроллера, возвращающий ResponseEntity<НужныйТип>
+        // определяем метод контроллера, возвращающий ResponseEntity<НужныйТип>
     public ResponseEntity<List<Page>> index(@RequestParam(defaultValue = "10") Integer limit) {
         // берём первые limit страниц
         var result = pages.stream().limit(limit).toList();

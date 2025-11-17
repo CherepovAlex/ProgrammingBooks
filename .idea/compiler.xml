@@ -6,10 +6,10 @@
       <profile name="Gradle Imported" enabled="true">
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.30/f195ee86e6c896ea47a1d39defbe20eb59cd149d/lombok-1.18.30.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.36/5a30490a6e14977d97d9c73c924c1f1b5311ea95/lombok-1.18.36.jar" />
         </processorPath>
-        <module name="04-Annotations.main" />
-        <module name="04-Annotations.test" />
+        <module name="06-rest-api-sr.main" />
+        <module name="06-rest-api-sr.test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -129,6 +129,9 @@
       <module name="02-http-crud-pr" options="-parameters -Xlint:-processing" />
       <module name="02-http-crud-pr.main" options="-parameters -Xlint:-processing" />
       <module name="02-http-crud-pr.test" options="-parameters -Xlint:-processing" />
+      <module name="02-http-crud-sr" options="-parameters -Xlint:-processing" />
+      <module name="02-http-crud-sr.main" options="-parameters -Xlint:-processing" />
+      <module name="02-http-crud-sr.test" options="-parameters -Xlint:-processing" />
       <module name="04-Annotations" options="-parameters -Xlint:-processing" />
       <module name="04-Annotations-pr" options="-parameters" />
       <module name="04-Annotations-pr.main" options="-parameters" />
@@ -139,9 +142,15 @@
       <module name="05-response-entity-pr" options="-parameters -Xlint:-processing" />
       <module name="05-response-entity-pr.main" options="-parameters -Xlint:-processing" />
       <module name="05-response-entity-pr.test" options="-parameters -Xlint:-processing" />
+      <module name="05-response-entity-sr" options="-parameters -Xlint:-processing" />
+      <module name="05-response-entity-sr.main" options="-parameters -Xlint:-processing" />
+      <module name="05-response-entity-sr.test" options="-parameters -Xlint:-processing" />
       <module name="05-response-entity.main" options="-parameters -Xlint:-processing" />
       <module name="05-response-entity.test" options="-parameters -Xlint:-processing" />
       <module name="06-rest-api" options="-parameters -Xlint:-processing" />
+      <module name="06-rest-api-sr" options="-parameters -Xlint:-processing" />
+      <module name="06-rest-api-sr.main" options="-parameters -Xlint:-processing" />
+      <module name="06-rest-api-sr.test" options="-parameters -Xlint:-processing" />
       <module name="06-rest-api.main" options="-parameters -Xlint:-processing" />
       <module name="06-rest-api.test" options="-parameters -Xlint:-processing" />
       <module name="07-Templater-dz" options="-Xlint:-processing" />

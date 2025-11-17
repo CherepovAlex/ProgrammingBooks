@@ -1,0 +1,1 @@
+rootProject.name = "06-rest-api-sr"

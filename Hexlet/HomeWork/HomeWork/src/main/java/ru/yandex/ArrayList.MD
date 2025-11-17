@@ -66,6 +66,7 @@ list.add("1");
 ```
 
 ![img_3.png](img_3.png)
+
 ...
 
 ```java
