@@ -34,6 +34,47 @@ public class Solution {
         return x == reversedHalf || x == reversedHalf / 10;
     }
 
+    public boolean isPalindrome3(int x) {
+        // Отрицательные числа и числа, оканчивающиеся на 0 (кроме 0) не могут быть палиндромами
+        if (x < 0 || (x % 10 == 0 && x != 0)) return false;
+        // Инициализируем переменную для хранения развернутой половины числа
+        int reversedHalf = 0;
+        // Разворачиваем вторую половину числа, пока исходное число больше развернутой половины
+        while (x > reversedHalf) {
+            // добавляем последнюю цифру исходного числа к развернутой половине
+            reversedHalf = reversedHalf * 10 + x % 10;
+            // Удаляем последнюю цифру из исходного числа
+            x /= 10;
+            // Выводим отладочную информацию
+            // System.out.println(reversedHalf + " " + x);
+        }
+        // Проверяем для четного и нечетного количества цифр
+        return x == reversedHalf || x == reversedHalf / 10;
+    }
+
+    public boolean isPalindrome4(int x) {
+    // Negative numbers and numbers ending with 0 (except 0 itself) cannot be palindromes
+    if (x < 0 || (x % 10 == 0 && x != 0)) return false;
+
+    // Initialize a variable to store the reversed half of the number
+    int reversedHalf = 0;
+
+    // Reverse the second half of the number while the original number is greater than the reversed half
+    while (x > reversedHalf) {
+        // Add the last digit of the original number to the reversed half
+        reversedHalf = reversedHalf * 10 + x % 10;
+
+        // Remove the last digit from the original number
+        x /= 10;
+
+        // Print debug information
+        // System.out.println(reversedHalf + " " + x);
+    }
+
+    // Check for both even and odd number of digits
+    return x == reversedHalf || x == reversedHalf / 10;
+}
+
      // 2 version, time - O(n), space - O(n) - более читаемый, но использует дополнительную помять
      private static boolean checkPalindrome(String num) {
         // Устанавливает указатели на начало и коней строки

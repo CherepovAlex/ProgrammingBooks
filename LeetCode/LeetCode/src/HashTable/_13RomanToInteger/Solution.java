@@ -91,6 +91,38 @@ public class Solution {
         };
     }
 
+    // time O(n), space O(1) - optimal solution
+public int romanToInt2(String s) {
+    int result = 0; // Initialize the variable to store the result
+
+    int prev = getValue(s.charAt(0)); // Get the value of the first character to start the comparison
+
+    for (int i = 1; i < s.length(); i++) {  // Iterate through the string starting from the second character
+        int curr = getValue2(s.charAt(i));   // Get the value of the current character
+        if (prev >= curr) {  // If the previous value is greater than or equal to the current one - add it
+            result += prev;
+        } else {             // (Roman numerals are usually in descending order)
+            result -= prev;  // If the previous value is less than the current one - subtract it
+        }                    // This handles cases like IV, IX, XL, XC, CD, CM
+        prev = curr;         // Update the previous value for the next iteration
+    }
+    result += prev;          // Add the value of the last character (it is always added)
+    return result;           // Return the final result
+}
+// Helper method to get the numeric value of a Roman numeral
+private int getValue2(char ch) {
+    return switch (ch) {    // Using switch expression for compactness and readability
+        case 'I' -> 1;
+        case 'V' -> 5;
+        case 'X' -> 10;
+        case 'L' -> 50;
+        case 'C' -> 100;
+        case 'D' -> 500;
+        case 'M' -> 1000;
+        default -> 0;       // In case of an invalid character
+    };
+}
+
     public static void main(String[] args) {
         String s = "MCMXCIV";
         System.out.println(new Solution().romanToInt1(s));

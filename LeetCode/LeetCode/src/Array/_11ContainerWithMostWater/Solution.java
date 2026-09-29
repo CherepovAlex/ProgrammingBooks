@@ -33,6 +33,7 @@ public class Solution {
         }
         return max_area; // Возвращаем найденную максимальную площадь
     }
+
     // Альтернативная версия с более читаемыми названиями переменных
     public int maxArea1(int[] height) {
         int maxArea = 0;    // Инициализация максимальной площади
@@ -57,16 +58,16 @@ public class Solution {
         // Возвращаем результат
         return maxArea;
     }
+
     // Оптимизированная версия с пропуском линий
     public int maxArea2(int[] height) {
         int maxArea = 0;    // Инициализация максимальной площади
         int left = 0;       // Левый указатель
         int right = height.length - 1; // Правый указатель
-
+        // Основной алгоритм - два указателя
         while (left < right) {   // Пока указатели не встретились
             int minHeight = Math.min(height[left], height[right]);  // Определяем минимальную высоту
             maxArea = Math.max(maxArea, minHeight * (right - left));// Обновляем максимальную площадь
-
             // Пропускаем все линии, которые не могут дать большую площадь
             while (left < right && height[left] <= minHeight) {
                 left++; // Пропускаем левые линии, которые не выше текущей минимальной
@@ -76,6 +77,27 @@ public class Solution {
             }
         }
         // Возвращаем результат
+        return maxArea;
+    }
+
+    // Optimized version with line skipping
+    public int maxArea3(int[] height) {
+        int maxArea = 0;    // Initialize maximum area
+        int left = 0;       // Left pointer
+        int right = height.length - 1; // Right pointer
+        // Main algorithm - two pointers
+        while (left < right) {   // While pointers haven't met
+            int minHeight = Math.min(height[left], height[right]);  // Determine minimum height
+            maxArea = Math.max(maxArea, minHeight * (right - left));// Update maximum area
+            // Skip all lines that cannot give a larger area
+            while (left < right && height[left] <= minHeight) {
+                left++; // Skip left lines that are not taller than current minimum
+            }
+            while (left < right && height[right] <= minHeight) {
+                right--; // Skip right lines that are not taller than current minimum
+            }
+        }
+        // Return result
         return maxArea;
     }
 

@@ -2,7 +2,7 @@ package DynamicProgramming._70ClimbingStairs;
 
 import java.util.HashMap;
 import java.util.Map;
-
+// 70. Подъём по лестнице
 // Вы поднимаетесь по лестнице. Чтобы добраться до вершины, нужно сделать n шагов.
 // Каждый раз вы можете подняться либо на 1 ступеней, либо на 2 ступеней.
 // Сколькими различными способами можно подняться на вершину?
@@ -22,8 +22,10 @@ import java.util.Map;
 public class Solution {
     // Кэш для хранения уже вычисленных результатов (мемоизация)
     private final Map<Integer, Integer> map = new HashMap<>();
+
+    // с мемоизацией - хорош для понимания рекурсивной природы задачи:
     // time O(n), space O(n)
-    public int climbStairs(int n) {
+    public int climbStairs1(int n) {
         return stairs(0, n); // Начинаем с 0-й ступеньки, цель - n
     }
 
@@ -34,6 +36,7 @@ public class Solution {
         if (current > target) {
             return 0;           // Перешагнули вершину - невалидный путь
         }
+
         // Проверяем, вычисляли ли уже для этой позиции
         if (map.containsKey(current)) { // Мемоизация: если уже вычисляли для этой позиции
             //Возвращаем сохраненный результат
@@ -45,6 +48,7 @@ public class Solution {
         return ways;             // Возвращаем количество способов для текущей позиции
     }
 
+    // Оптимальное решение: динамическое программирование с постоянной памятью
     // time O(n) space O(1)
     public int climbStairs2(int n) {
         // Базовые случаи: для 1 и 2 ступенек ответы известны
@@ -68,10 +72,38 @@ public class Solution {
         return prev2;
     }
 
+    // Сверхоптимальное решение: формула Бине/золотое сечение
+    // time O(1), space O(1) - но использует Math.pow
+    public int climbStairsFormula(int n) {
+        // Используем формулу золотого сечения: f(n) ≈ φ^n / √5
+        double sqrt5 = Math.sqrt(5); // Вычисляем √5 один раз
+        double phi = (1 + sqrt5) / 2; // Золотое сечение φ ≈ 1.618
+        // Используем формулу Бине и округляем до ближайшего целого
+        return (int) Math.round(Math.pow(phi, n + 1) / sqrt5);
+    }
+
+    // Рекомендация по выбору метода:
+    //climbStairs1 (с мемоизацией) - хорош для понимания рекурсивной природы задачи:
+    //Время: O(n)
+    //Память: O(n) для кэша
+    //Полезен для обучения мемоизации
+
+    //climbStair2 (динамическое программирование с O(1) памятью) - самый оптимальный:
+    //Время: O(n)
+    //Память: O(1)
+    //Не использует рекурсию (нет риска переполнения стека)
+    //Простой и понятный алгоритм
+
+    //climbStairsFormula (математическая формула) - теоретически O(1):
+    //Время: O(1) (но Math.pow может быть дорогой операцией)
+    //Память: O(1)
+    //Может иметь проблемы с точностью при больших n
+
+
     public static void main(String[] args) {
         int n = 2;
-        System.out.println(new Solution().climbStairs(n));
+        System.out.println(new Solution().climbStairs1(n));
         int n1 = 4;
-        System.out.println(new Solution().climbStairs(n1));
+        System.out.println(new Solution().climbStairs2(n1));
     }
 }
